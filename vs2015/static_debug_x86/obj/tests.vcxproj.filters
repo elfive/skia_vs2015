@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{0D1F53F1-2E1D-0847-D52E-44A54A206423}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tests/AAClipTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/AnnotationTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ApplyGammaTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ArenaAllocTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/AsADashTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BadIcoTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapCopyTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapGetColorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitSetTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlendTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlitMaskClip.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlurTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CachedDataTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CachedDecodingPixelRefTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasStateHelpers.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasStateTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ChecksumTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClampRangeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClearTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipBoundsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipCubicTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipperTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipStackTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecAnimTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecExactReadTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecPartialTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorMatrixTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorPrivTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorSpaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorSpaceXformTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CopySurfaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CPlusPlusEleven.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DashPathEffectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DataRefTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DequeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DetermineDomainModeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DeviceLooperTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DeviceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DFPathRendererTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DiscardableMemoryPoolTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DiscardableMemoryTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawBitmapRectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawTextTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DynamicHashTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EGLImageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EmptyPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EncodeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ExifTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/F16StagesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FillPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FitsInTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenableCustomFactory.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenableFactoryToName.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenDrawableTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Float16Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FloatingPointTextureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontHostStreamTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontHostTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontMgrTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontNamesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontObjTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FrontBufferedStreamTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GeometryTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GifTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GLProgramsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuDrawPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuLayerCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuRectanizerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuSampleLocationsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GradientTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrAllocatorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrContextAbandonTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrContextFactoryTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrMemoryPoolTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrMeshTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrPipelineDynamicStateTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrPorterDuffTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrShapeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrSKSLPrettyPrintTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrSurfaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrTextureMipMapInvalidationTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrTRecorderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HashTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HighContrastFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HSVRoundTripTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/image-bitmap.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ICCTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFilterCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFrom565Bitmap.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageGeneratorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageIsOpaqueTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageNewShaderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageStorageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IndexedPngOverflowTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InfRectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InsetConvexPolyTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InterpolatorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IntTextureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InvalidIndexedPngTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IsClosedSingleContourTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LayerDrawLooperTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LayerRasterizerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LListTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LRUCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MallocPixelRefTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MaskCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Matrix44Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MatrixClipCollapseTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MatrixTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MD5Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MemoryTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MemsetTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MessageBusTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MetaDataTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MipMapTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OnceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OSPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OverAlignedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PackBitsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PackedConfigsTextureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintBreakTextTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintImageFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ParametricStageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ParsePathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathCoverageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathMeasureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFDeflateWStreamTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFDocumentTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFGlyphsToUnicodeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFJpegEmbedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFMetadataAttributeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFOpaqueSrcModeToSrcOverTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFPrimitivesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OnFlushCallbackTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureBBHTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureShaderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PipeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PixelRefTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Point3Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PointTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PremulAlphaRoundTripTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PrimitiveProcessorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProcessorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyConversionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyRefTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/QuickRejectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RandomTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Reader32Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ReadPixelsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ReadWriteAlphaTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordDrawTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecorderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordingXfermodeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordOptsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordPatternTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RectangleTextureTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RefCntTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RefDictTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RegionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RenderTargetContextTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ResourceAllocatorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ResourceCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RoundRectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RRectInPathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RTreeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SafeMathTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ScalarTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ScaleToSidesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SerializationTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShaderOpacityTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShaderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShadowTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SizeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Sk4x4fTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkBase64Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug5221.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug6389.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug6653.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkColor4fTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkDOMTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkFixed15Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkImageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkLiteDLTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkNxTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkPEGTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkRasterPipelineTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkResourceCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSharedMutexTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLErrorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLFPTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLGLSLTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLMemoryLayoutTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLSPIRVTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SortTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SpecialImageTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SpecialSurfaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SrcOverTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBMipMapTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBReadWritePixelsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StreamBufferTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StreamTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StringTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StrokerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StrokeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SubsetPath.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SurfaceSemaphoreTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SurfaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SVGDeviceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SwizzlerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TArrayTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TDPQueueTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TableColorFilterTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TemplatesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TessellatingPathRendererTests.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TestConfigParsing.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TestTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <None Include="../../../tests/TestUtils.h">
+      <Filter>tests</Filter>
+    </None>
+    <CustomBuild Include="../../../tests/TestUtils.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TextBlobCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TextBlobTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Time.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TLSTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TopoSortTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TraceMemoryDumpTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TracingTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TransferPixelsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TypefaceTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/UnicodeTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/UtilsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VerticesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkClearTests.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkHeapTests.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkUploadPixelsTests.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkWrapTests.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/WindowRectanglesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/WritePixelsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Writer32Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/YUVCacheTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/YUVTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleIdeas.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBattles.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBoundsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderConicTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuildUseTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsChalkboardTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicConicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTestData.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionIdeas.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicReduceOrderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDCubicTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDebug.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDLineTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDPointTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDRectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDVectorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsExtendedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsFuzz763Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsInverseTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsIssue3651.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineParametetersTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCircleThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCubicThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpLoopThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpRectThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTestData.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadReduceOrderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyDegenerateThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyFailTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadralateralsThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyRectThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTrianglesThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSkpTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTestCommon.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreadedCommon.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreeWayTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTigerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTightBoundsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTypesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98CEB5A4-BDAE-C6A0-684A-3C5055FC8936}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zlib</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../../../third_party/externals/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/w /FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/adler32.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.adler32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.adler32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/compress.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.compress.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.compress.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/crc32.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.crc32.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.crc32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/deflate.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.deflate.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.deflate.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/gzclose.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.gzclose.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.gzclose.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/gzlib.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.gzlib.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.gzlib.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/gzread.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.gzread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.gzread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/gzwrite.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.gzwrite.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.gzwrite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/infback.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.infback.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.infback.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/inffast.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.inffast.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.inffast.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/inflate.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.inflate.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.inflate.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/inftrees.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.inftrees.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.inftrees.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/trees.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.trees.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.trees.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/uncompr.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.uncompr.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.uncompr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/zlib/zutil.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/zlib/zlib.zutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/zlib/zlib.zutil.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/third_party/zlib/zlib.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/zlib/zlib.stamp" />
+  </Target>
+</Project>

@@ -35,6 +35,7 @@ tools/skp/page_sets/data/*.json
 tools/skp/page_sets/data/*.wpr
 xcodebuild
 
+depot_tools
 build
 buildtools
 tools/clang

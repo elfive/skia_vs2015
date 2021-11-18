@@ -1,0 +1,30 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSK_GAMMA_APPLY_TO_A8 -DSK_ENABLE_DISCRETE_GPU -DGR_TEST_UTILS=1 -DSK_SUPPORT_GPU=0
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../tools -I../../tools/debugger -I../../tools/timer -I../../tools/trace -I../../include/private -I../../src/c -I../../src/codec -I../../src/core -I../../src/effects -I../../src/fonts -I../../src/image -I../../src/images -I../../src/lazy -I../../src/opts -I../../src/pathops -I../../src/pdf -I../../src/ports -I../../src/sfnt -I../../src/shaders -I../../src/shaders/gradients -I../../src/sksl -I../../src/utils -I../../src/utils/win -I../../src/xml -I../../third_party/gif -I../../third_party/externals/jsoncpp/include -I../../tools/flags -I../../tools/flags -I../../third_party/libpng -I../../include/android -I../../include/c -I../../include/codec -I../../include/config -I../../include/core -I../../include/effects -I../../include/encode -I../../include/gpu -I../../include/gpu/gl -I../../include/pathops -I../../include/ports -I../../include/svg -I../../include/utils -I../../include/utils/mac
+cflags = /FS /bigobj /WX /utf-8 /W3 /wd4244 /wd4267 /wd4800 /wd4291 /Zi /MDd
+cflags_cc = /GR-
+label_name = tool_utils
+root_out_dir = .
+target_out_dir = obj
+target_output_name = tool_utils
+
+build obj/tools/tool_utils.AndroidSkDebugToStdOut.obj: cxx ../../tools/AndroidSkDebugToStdOut.cpp
+build obj/tools/tool_utils.CrashHandler.obj: cxx ../../tools/CrashHandler.cpp
+build obj/tools/tool_utils.LsanSuppressions.obj: cxx ../../tools/LsanSuppressions.cpp
+build obj/tools/tool_utils.ProcStats.obj: cxx ../../tools/ProcStats.cpp
+build obj/tools/tool_utils.Resources.obj: cxx ../../tools/Resources.cpp
+build obj/tools/tool_utils.ThermalManager.obj: cxx ../../tools/ThermalManager.cpp
+build obj/tools/tool_utils.UrlDataManager.obj: cxx ../../tools/UrlDataManager.cpp
+build obj/tools/debugger/tool_utils.SkDebugCanvas.obj: cxx ../../tools/debugger/SkDebugCanvas.cpp
+build obj/tools/debugger/tool_utils.SkDrawCommand.obj: cxx ../../tools/debugger/SkDrawCommand.cpp
+build obj/tools/debugger/tool_utils.SkJsonWriteBuffer.obj: cxx ../../tools/debugger/SkJsonWriteBuffer.cpp
+build obj/tools/debugger/tool_utils.SkObjectParser.obj: cxx ../../tools/debugger/SkObjectParser.cpp
+build obj/tools/tool_utils.picture_utils.obj: cxx ../../tools/picture_utils.cpp
+build obj/tools/tool_utils.random_parse_path.obj: cxx ../../tools/random_parse_path.cpp
+build obj/tools/tool_utils.sk_tool_utils.obj: cxx ../../tools/sk_tool_utils.cpp
+build obj/tools/tool_utils.sk_tool_utils_font.obj: cxx ../../tools/sk_tool_utils_font.cpp
+build obj/tools/timer/tool_utils.Timer.obj: cxx ../../tools/timer/Timer.cpp
+build obj/tools/trace/tool_utils.SkChromeTracingTracer.obj: cxx ../../tools/trace/SkChromeTracingTracer.cpp
+build obj/tools/trace/tool_utils.SkDebugfTracer.obj: cxx ../../tools/trace/SkDebugfTracer.cpp
+build obj/tools/trace/tool_utils.SkEventTracingPriv.obj: cxx ../../tools/trace/SkEventTracingPriv.cpp
+
+build obj/tool_utils.stamp: stamp obj/tools/tool_utils.AndroidSkDebugToStdOut.obj obj/tools/tool_utils.CrashHandler.obj obj/tools/tool_utils.LsanSuppressions.obj obj/tools/tool_utils.ProcStats.obj obj/tools/tool_utils.Resources.obj obj/tools/tool_utils.ThermalManager.obj obj/tools/tool_utils.UrlDataManager.obj obj/tools/debugger/tool_utils.SkDebugCanvas.obj obj/tools/debugger/tool_utils.SkDrawCommand.obj obj/tools/debugger/tool_utils.SkJsonWriteBuffer.obj obj/tools/debugger/tool_utils.SkObjectParser.obj obj/tools/tool_utils.picture_utils.obj obj/tools/tool_utils.random_parse_path.obj obj/tools/tool_utils.sk_tool_utils.obj obj/tools/tool_utils.sk_tool_utils_font.obj obj/tools/timer/tool_utils.Timer.obj obj/tools/trace/tool_utils.SkChromeTracingTracer.obj obj/tools/trace/tool_utils.SkDebugfTracer.obj obj/tools/trace/tool_utils.SkEventTracingPriv.obj || obj/third_party/jsoncpp/jsoncpp.stamp obj/common_flags.stamp obj/flags.stamp obj/third_party/libpng/libpng.stamp ./skia.lib obj/gpu_tool_utils.stamp obj/third_party/zlib/zlib.stamp obj/third_party/zlib/zlib_x86.stamp

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{0D1F53F1-2E1D-0847-D52E-44A54A206423}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tests/PathOpsAngleIdeas.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBattles.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBoundsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderConicTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuildUseTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsChalkboardTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicConicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTestData.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionIdeas.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicReduceOrderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDCubicTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDebug.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDLineTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDPointTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDRectTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDVectorTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsExtendedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsFuzz763Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsInverseTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsIssue3651.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineParametetersTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCircleThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCubicThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpLoopThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpRectThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTestData.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadReduceOrderTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyDegenerateThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyFailTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadralateralsThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyRectThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTrianglesThreadedTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSkpTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTestCommon.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreadedCommon.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreeWayTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTigerTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTightBoundsTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTypesTest.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skia_test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Test.cpp">
+      <Filter>tests</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

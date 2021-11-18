@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8EFFB6EC-7684-457F-98DA-DB99E4D82CB4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tests</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../tests;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../experimental/svg/model;../../../tools/flags;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;../../../third_party/libpng;../../../third_party/externals/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tests/AAClipTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.AAClipTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.AAClipTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/AnnotationTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.AnnotationTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.AnnotationTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ApplyGammaTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ApplyGammaTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ApplyGammaTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ArenaAllocTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ArenaAllocTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ArenaAllocTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/AsADashTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.AsADashTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.AsADashTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BadIcoTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BadIcoTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BadIcoTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapCopyTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BitmapCopyTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BitmapCopyTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapGetColorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BitmapGetColorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BitmapGetColorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitmapTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BitmapTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BitmapTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BitSetTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BitSetTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BitSetTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlendTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BlendTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BlendTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlitMaskClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BlitMaskClip.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BlitMaskClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/BlurTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.BlurTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.BlurTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CachedDataTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CachedDataTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CachedDataTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CachedDecodingPixelRefTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CachedDecodingPixelRefTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CachedDecodingPixelRefTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasStateHelpers.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CanvasStateHelpers.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CanvasStateHelpers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasStateTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CanvasStateTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CanvasStateTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CanvasTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CanvasTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CanvasTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ChecksumTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ChecksumTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ChecksumTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClampRangeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClampRangeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClampRangeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClearTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClearTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClearTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipBoundsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClipBoundsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClipBoundsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipCubicTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClipCubicTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClipCubicTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipperTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClipperTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClipperTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ClipStackTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ClipStackTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ClipStackTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecAnimTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CodecAnimTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CodecAnimTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecExactReadTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CodecExactReadTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CodecExactReadTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecPartialTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CodecPartialTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CodecPartialTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CodecTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CodecTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CodecTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorMatrixTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorMatrixTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorMatrixTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorPrivTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorPrivTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorPrivTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorSpaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorSpaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorSpaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorSpaceXformTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorSpaceXformTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorSpaceXformTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ColorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ColorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ColorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CopySurfaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CopySurfaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CopySurfaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CPlusPlusEleven.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CPlusPlusEleven.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CPlusPlusEleven.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/CTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.CTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.CTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DashPathEffectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DashPathEffectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DashPathEffectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DataRefTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DataRefTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DataRefTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DequeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DequeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DequeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DetermineDomainModeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DetermineDomainModeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DetermineDomainModeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DeviceLooperTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DeviceLooperTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DeviceLooperTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DeviceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DeviceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DeviceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DFPathRendererTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DFPathRendererTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DFPathRendererTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DiscardableMemoryPoolTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DiscardableMemoryPoolTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DiscardableMemoryPoolTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DiscardableMemoryTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DiscardableMemoryTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DiscardableMemoryTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawBitmapRectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DrawBitmapRectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DrawBitmapRectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DrawFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DrawFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DrawPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DrawPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DrawTextTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DrawTextTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DrawTextTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/DynamicHashTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.DynamicHashTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.DynamicHashTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EGLImageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.EGLImageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.EGLImageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EmptyPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.EmptyPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.EmptyPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/EncodeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.EncodeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.EncodeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ExifTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ExifTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ExifTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/F16StagesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.F16StagesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.F16StagesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FillPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FillPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FillPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FitsInTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FitsInTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FitsInTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenableCustomFactory.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FlattenableCustomFactory.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FlattenableCustomFactory.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenableFactoryToName.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FlattenableFactoryToName.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FlattenableFactoryToName.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FlattenDrawableTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FlattenDrawableTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FlattenDrawableTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Float16Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Float16Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Float16Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FloatingPointTextureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FloatingPointTextureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FloatingPointTextureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontHostStreamTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FontHostStreamTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FontHostStreamTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontHostTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FontHostTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FontHostTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontMgrTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FontMgrTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FontMgrTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontNamesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FontNamesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FontNamesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FontObjTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FontObjTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FontObjTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/FrontBufferedStreamTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.FrontBufferedStreamTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.FrontBufferedStreamTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GeometryTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GeometryTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GeometryTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GifTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GifTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GifTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GLProgramsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GLProgramsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GLProgramsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuDrawPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GpuDrawPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GpuDrawPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuLayerCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GpuLayerCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GpuLayerCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuRectanizerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GpuRectanizerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GpuRectanizerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GpuSampleLocationsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GpuSampleLocationsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GpuSampleLocationsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GradientTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GradientTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GradientTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrAllocatorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrAllocatorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrAllocatorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrContextAbandonTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrContextAbandonTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrContextAbandonTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrContextFactoryTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrContextFactoryTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrContextFactoryTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrMemoryPoolTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrMemoryPoolTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrMemoryPoolTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrMeshTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrMeshTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrMeshTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrPipelineDynamicStateTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrPipelineDynamicStateTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrPipelineDynamicStateTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrPorterDuffTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrPorterDuffTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrPorterDuffTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrShapeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrShapeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrShapeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrSKSLPrettyPrintTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrSKSLPrettyPrintTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrSKSLPrettyPrintTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrSurfaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrSurfaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrSurfaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrTextureMipMapInvalidationTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrTextureMipMapInvalidationTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrTextureMipMapInvalidationTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/GrTRecorderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.GrTRecorderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.GrTRecorderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HashTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.HashTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.HashTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HighContrastFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.HighContrastFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.HighContrastFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/HSVRoundTripTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.HSVRoundTripTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.HSVRoundTripTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/image-bitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.image-bitmap.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.image-bitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ICCTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ICCTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ICCTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFilterCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageFilterCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageFilterCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageFrom565Bitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageFrom565Bitmap.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageFrom565Bitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageGeneratorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageGeneratorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageGeneratorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageIsOpaqueTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageIsOpaqueTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageIsOpaqueTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageNewShaderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageNewShaderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageNewShaderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageStorageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageStorageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageStorageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ImageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ImageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ImageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IndexedPngOverflowTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.IndexedPngOverflowTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.IndexedPngOverflowTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InfRectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.InfRectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.InfRectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InsetConvexPolyTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.InsetConvexPolyTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.InsetConvexPolyTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InterpolatorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.InterpolatorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.InterpolatorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IntTextureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.IntTextureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.IntTextureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/InvalidIndexedPngTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.InvalidIndexedPngTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.InvalidIndexedPngTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/IsClosedSingleContourTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.IsClosedSingleContourTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.IsClosedSingleContourTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LayerDrawLooperTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.LayerDrawLooperTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.LayerDrawLooperTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LayerRasterizerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.LayerRasterizerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.LayerRasterizerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LListTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.LListTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.LListTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/LRUCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.LRUCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.LRUCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MallocPixelRefTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MallocPixelRefTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MallocPixelRefTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MaskCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MaskCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MaskCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Matrix44Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Matrix44Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Matrix44Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MatrixClipCollapseTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MatrixClipCollapseTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MatrixClipCollapseTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MatrixTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MatrixTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MatrixTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MD5Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MD5Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MD5Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MemoryTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MemoryTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MemoryTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MemsetTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MemsetTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MemsetTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MessageBusTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MessageBusTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MessageBusTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MetaDataTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MetaDataTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MetaDataTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/MipMapTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.MipMapTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.MipMapTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OnceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.OnceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.OnceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OSPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.OSPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.OSPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OverAlignedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.OverAlignedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.OverAlignedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PackBitsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PackBitsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PackBitsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PackedConfigsTextureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PackedConfigsTextureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PackedConfigsTextureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintBreakTextTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PaintBreakTextTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PaintBreakTextTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintImageFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PaintImageFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PaintImageFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PaintTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PaintTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PaintTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ParametricStageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ParametricStageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ParametricStageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ParsePathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ParsePathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ParsePathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathCoverageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathCoverageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathCoverageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathMeasureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathMeasureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathMeasureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFDeflateWStreamTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFDeflateWStreamTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFDeflateWStreamTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFDocumentTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFDocumentTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFDocumentTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFGlyphsToUnicodeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFGlyphsToUnicodeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFGlyphsToUnicodeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFJpegEmbedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFJpegEmbedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFJpegEmbedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFMetadataAttributeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFMetadataAttributeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFMetadataAttributeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFOpaqueSrcModeToSrcOverTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFOpaqueSrcModeToSrcOverTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFOpaqueSrcModeToSrcOverTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PDFPrimitivesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PDFPrimitivesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PDFPrimitivesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/OnFlushCallbackTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.OnFlushCallbackTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.OnFlushCallbackTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureBBHTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PictureBBHTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PictureBBHTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureShaderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PictureShaderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PictureShaderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PictureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PictureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PictureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PipeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PipeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PipeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PixelRefTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PixelRefTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PixelRefTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Point3Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Point3Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Point3Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PointTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PointTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PointTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PremulAlphaRoundTripTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PremulAlphaRoundTripTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PremulAlphaRoundTripTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PrimitiveProcessorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PrimitiveProcessorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PrimitiveProcessorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProcessorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ProcessorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ProcessorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyConversionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ProxyConversionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ProxyConversionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyRefTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ProxyRefTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ProxyRefTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ProxyTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ProxyTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ProxyTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/QuickRejectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.QuickRejectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.QuickRejectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RandomTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RandomTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RandomTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Reader32Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Reader32Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Reader32Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ReadPixelsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ReadPixelsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ReadPixelsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ReadWriteAlphaTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ReadWriteAlphaTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ReadWriteAlphaTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordDrawTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecordDrawTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecordDrawTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecorderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecorderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecorderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordingXfermodeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecordingXfermodeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecordingXfermodeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordOptsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecordOptsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecordOptsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordPatternTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecordPatternTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecordPatternTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RecordTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RecordTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RecordTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RectangleTextureTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RectangleTextureTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RectangleTextureTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RefCntTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RefCntTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RefCntTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RefDictTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RefDictTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RefDictTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RegionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RegionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RegionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RenderTargetContextTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RenderTargetContextTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RenderTargetContextTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ResourceAllocatorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ResourceAllocatorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ResourceAllocatorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ResourceCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ResourceCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ResourceCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RoundRectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RoundRectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RoundRectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RRectInPathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RRectInPathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RRectInPathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/RTreeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.RTreeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.RTreeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SafeMathTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SafeMathTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SafeMathTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ScalarTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ScalarTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ScalarTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ScaleToSidesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ScaleToSidesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ScaleToSidesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SerializationTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SerializationTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SerializationTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShaderOpacityTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ShaderOpacityTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ShaderOpacityTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShaderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ShaderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ShaderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/ShadowTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.ShadowTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.ShadowTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SizeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SizeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SizeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Sk4x4fTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Sk4x4fTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Sk4x4fTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkBase64Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkBase64Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkBase64Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug5221.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.skbug5221.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.skbug5221.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug6389.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.skbug6389.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.skbug6389.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skbug6653.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.skbug6653.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.skbug6653.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkColor4fTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkColor4fTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkColor4fTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkDOMTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkDOMTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkDOMTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkFixed15Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkFixed15Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkFixed15Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkImageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkImageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkImageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkLiteDLTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkLiteDLTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkLiteDLTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkNxTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkNxTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkNxTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkPEGTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkPEGTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkPEGTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkRasterPipelineTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkRasterPipelineTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkRasterPipelineTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkResourceCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkResourceCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkResourceCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSharedMutexTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSharedMutexTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSharedMutexTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLErrorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSLErrorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSLErrorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLFPTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSLFPTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSLFPTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLGLSLTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSLGLSLTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSLGLSLTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLMemoryLayoutTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSLMemoryLayoutTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSLMemoryLayoutTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SkSLSPIRVTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SkSLSPIRVTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SkSLSPIRVTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SortTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SortTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SortTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SpecialImageTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SpecialImageTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SpecialImageTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SpecialSurfaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SpecialSurfaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SpecialSurfaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SrcOverTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SrcOverTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SrcOverTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBMipMapTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SRGBMipMapTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SRGBMipMapTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBReadWritePixelsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SRGBReadWritePixelsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SRGBReadWritePixelsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SRGBTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SRGBTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SRGBTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StreamBufferTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.StreamBufferTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.StreamBufferTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StreamTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.StreamTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.StreamTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StringTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.StringTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.StringTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StrokerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.StrokerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.StrokerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/StrokeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.StrokeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.StrokeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SubsetPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SubsetPath.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SubsetPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SurfaceSemaphoreTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SurfaceSemaphoreTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SurfaceSemaphoreTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SurfaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SurfaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SurfaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SVGDeviceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SVGDeviceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SVGDeviceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/SwizzlerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.SwizzlerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.SwizzlerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TArrayTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TArrayTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TArrayTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TDPQueueTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TDPQueueTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TDPQueueTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TableColorFilterTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TableColorFilterTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TableColorFilterTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TemplatesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TemplatesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TemplatesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TessellatingPathRendererTests.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TessellatingPathRendererTests.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TessellatingPathRendererTests.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TestConfigParsing.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TestConfigParsing.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TestConfigParsing.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TestTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TestTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TestTest.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../tests/TestUtils.h" />
+    <CustomBuild Include="../../../tests/TestUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TestUtils.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TestUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TextBlobCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TextBlobCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TextBlobCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TextBlobTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TextBlobTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TextBlobTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Time.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Time.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Time.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TLSTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TLSTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TLSTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TopoSortTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TopoSortTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TopoSortTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TraceMemoryDumpTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TraceMemoryDumpTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TraceMemoryDumpTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TracingTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TracingTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TracingTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TransferPixelsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TransferPixelsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TransferPixelsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/TypefaceTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.TypefaceTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.TypefaceTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/UnicodeTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.UnicodeTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.UnicodeTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/UtilsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.UtilsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.UtilsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VerticesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.VerticesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.VerticesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkClearTests.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.VkClearTests.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.VkClearTests.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkHeapTests.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.VkHeapTests.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.VkHeapTests.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkUploadPixelsTests.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.VkUploadPixelsTests.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.VkUploadPixelsTests.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/VkWrapTests.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.VkWrapTests.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.VkWrapTests.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/WindowRectanglesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.WindowRectanglesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.WindowRectanglesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/WritePixelsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.WritePixelsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.WritePixelsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Writer32Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.Writer32Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.Writer32Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/YUVCacheTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.YUVCacheTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.YUVCacheTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/YUVTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.YUVTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.YUVTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleIdeas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsAngleIdeas.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsAngleIdeas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsAngleTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsAngleTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBattles.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsBattles.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsBattles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBoundsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsBoundsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsBoundsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderConicTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsBuilderConicTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsBuilderConicTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsBuilderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsBuilderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuildUseTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsBuildUseTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsBuildUseTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsChalkboardTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsChalkboardTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsChalkboardTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsConicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsConicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsConicLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsConicLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsConicQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsConicQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicConicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicConicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicConicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTestData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicIntersectionTestData.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicIntersectionTestData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionIdeas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicLineIntersectionIdeas.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicLineIntersectionIdeas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicReduceOrderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsCubicReduceOrderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsCubicReduceOrderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDCubicTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDCubicTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDCubicTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDebug.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDebug.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDebug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDLineTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDLineTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDLineTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDPointTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDPointTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDPointTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDRectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDRectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDRectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDVectorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsDVectorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsDVectorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsExtendedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsExtendedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsExtendedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsFuzz763Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsFuzz763Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsFuzz763Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsInverseTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsInverseTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsInverseTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsIssue3651.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsIssue3651.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsIssue3651.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineParametetersTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsLineParametetersTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsLineParametetersTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCircleThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsOpCircleThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsOpCircleThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCubicThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsOpCubicThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsOpCubicThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpLoopThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsOpLoopThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsOpLoopThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpRectThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsOpRectThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsOpRectThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsOpTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsOpTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTestData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsQuadIntersectionTestData.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsQuadIntersectionTestData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsQuadLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsQuadLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsQuadLineIntersectionThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsQuadLineIntersectionThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadReduceOrderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsQuadReduceOrderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsQuadReduceOrderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyDegenerateThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyDegenerateThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyDegenerateThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyFailTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyFailTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyFailTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadralateralsThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyQuadralateralsThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyQuadralateralsThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyQuadThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyQuadThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyRectThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyRectThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyRectThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTrianglesThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSimplifyTrianglesThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSimplifyTrianglesThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSkpTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsSkpTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsSkpTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTestCommon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsTestCommon.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsTestCommon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreadedCommon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsThreadedCommon.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsThreadedCommon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreeWayTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsThreeWayTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsThreeWayTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTigerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsTigerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsTigerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTightBoundsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsTightBoundsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsTightBoundsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTypesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/tests.PathOpsTypesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/tests.PathOpsTypesTest.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/tests.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/tests.stamp" />
+  </Target>
+</Project>

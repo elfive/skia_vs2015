@@ -1,0 +1,21 @@
+defines = -DDAUTH_SUPPORT=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_TIME_H=1 -DMHD_USE_W32_THREADS=1 -DWINDOWS -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX
+include_dirs = -I../../third_party/libmicrohttpd "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../third_party/externals/microhttpd/src/include
+cflags = /w /FS /bigobj /WX /utf-8 /Zi /MDd
+cflags_c =
+label_name = libmicrohttpd
+root_out_dir = .
+target_out_dir = obj/third_party/libmicrohttpd
+target_output_name = libmicrohttpd
+
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.base64.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/base64.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.connection.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/connection.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.daemon.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/daemon.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.internal.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/internal.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.memorypool.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/memorypool.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.postprocessor.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/postprocessor.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.reason_phrase.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/reason_phrase.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.response.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/response.c
+build obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.tsearch.obj: cc ../../third_party/externals/microhttpd/src/microhttpd/tsearch.c
+build obj/third_party/externals/microhttpd/src/platform/libmicrohttpd.w32functions.obj: cc ../../third_party/externals/microhttpd/src/platform/w32functions.c
+
+build obj/third_party/libmicrohttpd/libmicrohttpd.stamp: stamp obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.base64.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.connection.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.daemon.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.internal.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.memorypool.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.postprocessor.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.reason_phrase.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.response.obj obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.tsearch.obj obj/third_party/externals/microhttpd/src/platform/libmicrohttpd.w32functions.obj

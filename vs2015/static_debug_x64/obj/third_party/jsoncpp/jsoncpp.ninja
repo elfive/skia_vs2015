@@ -1,0 +1,14 @@
+defines = -DJSON_USE_EXCEPTION=0 -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../third_party/externals/jsoncpp/include
+cflags = /w /FS /bigobj /WX /utf-8 /Zi /MDd
+cflags_cc = /GR-
+label_name = jsoncpp
+root_out_dir = .
+target_out_dir = obj/third_party/jsoncpp
+target_output_name = jsoncpp
+
+build obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_reader.obj: cxx ../../third_party/externals/jsoncpp/src/lib_json/json_reader.cpp
+build obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_value.obj: cxx ../../third_party/externals/jsoncpp/src/lib_json/json_value.cpp
+build obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_writer.obj: cxx ../../third_party/externals/jsoncpp/src/lib_json/json_writer.cpp
+
+build obj/third_party/jsoncpp/jsoncpp.stamp: stamp obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_reader.obj obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_value.obj obj/third_party/externals/jsoncpp/src/lib_json/jsoncpp.json_writer.obj

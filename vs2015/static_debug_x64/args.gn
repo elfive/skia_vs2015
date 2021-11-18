@@ -1,0 +1,16 @@
+is_component_build = false
+is_official_build = false
+target_cpu = "x64"
+skia_enable_pdf = false
+skia_enable_pdf = false
+skia_enable_effects = false
+skia_use_libjpeg_turbo = false
+skia_use_libpng = false
+skia_use_libwebp = false
+skia_use_egl = false
+skia_use_angle = false
+skia_use_expat = false
+skia_use_dng_sdk = false
+is_debug = true
+skia_enable_gpu = false
+extra_cflags = [ "/MDd" ]

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tools\bookmaker">
+      <UniqueIdentifier>{44643316-9D5D-1EAE-ED29-AB9770641790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{0E9715BA-57B3-F23F-1EED-56699DC72D4B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tools/bookmaker/bookmaker.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/fiddleParser.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/includeParser.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/includeWriter.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/mdOut.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/parserCommon.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/bookmaker/spellCheck.cpp">
+      <Filter>tools\bookmaker</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

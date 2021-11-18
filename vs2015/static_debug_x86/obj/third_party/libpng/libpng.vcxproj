@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1B00A28F-D46B-B7D9-F35F-998542AF6255}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libpng</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../../../third_party/libpng;../../../../../third_party/externals/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/w /FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>PNG_INTEL_SSE;_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/libpng/png.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.png.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.png.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngerror.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngerror.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngerror.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngget.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngget.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngget.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngmem.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngmem.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngmem.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngpread.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngpread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngpread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngread.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngread.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngread.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngrio.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngrio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngrio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngrtran.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngrtran.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngrtran.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngrutil.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngrutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngrutil.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngset.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngset.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngset.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngtrans.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngtrans.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngtrans.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngwio.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngwio.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngwio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngwrite.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngwrite.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngwrite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngwtran.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngwtran.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngwtran.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/pngwutil.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.pngwutil.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/libpng.pngwutil.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/contrib/intel/filter_sse2_intrinsics.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/contrib/intel/libpng.filter_sse2_intrinsics.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/contrib/intel/libpng.filter_sse2_intrinsics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/libpng/contrib/intel/intel_init.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/libpng/contrib/intel/libpng.intel_init.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/libpng/contrib/intel/libpng.intel_init.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/third_party/libpng/libpng.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/libpng/libpng.stamp" />
+  </Target>
+</Project>

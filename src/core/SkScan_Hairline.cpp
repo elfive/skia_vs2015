@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2006 The Android Open Source Project
  *
  * Use of this source code is governed by a BSD-style license that can be
@@ -703,4 +703,134 @@ void SkScan::AntiHairLine(const SkPoint pts[], int count, const SkRasterClip& cl
         }
         AntiHairLineRgn(pts, count, clipRgn, blitter);
     }
+}
+
+inline static bool quad_too_curvy(const SkPoint pts[3])
+{
+	return true;
+}
+
+inline static bool cubic_too_curvy(const SkPoint pts[4])
+{
+	return true;
+}
+
+inline static bool conic_too_curvy(const SkPoint pts[4])
+{
+	return true;
+}
+
+static void hairquad_points(const SkPoint pts[3], int level, SkPointList& points)
+{
+	if (level > 0 && quad_too_curvy(pts))
+	{
+		SkPoint tmp[5];
+
+		SkChopQuadAtHalf(pts, tmp);
+		hairquad_points(tmp, level - 1, points);
+		hairquad_points(&tmp[2], level - 1, points);
+	}
+	else
+	{
+		points.push_back(pts[1]);
+		points.push_back(pts[2]);
+	}
+
+}
+
+static void haircubic_points(const SkPoint pts[4], int level,
+	SkPointList& points)
+{
+	if (level > 0 && cubic_too_curvy(pts))
+	{
+		SkPoint tmp[7];
+
+		SkChopCubicAtHalf(pts, tmp);
+		haircubic_points(tmp, level - 1, points);
+		haircubic_points(&tmp[3], level - 1, points);
+
+	}
+	else
+	{
+		points.push_back(pts[1]);
+		points.push_back(pts[2]);
+		points.push_back(pts[3]);
+	}
+}
+
+static void hairconic_points(const SkPoint pts[3], SkScalar conicWeight,
+	SkPointList& points)
+{
+	SkPoint quads[5];
+	SkPath::ConvertConicToQuads(pts[0], pts[1], pts[2], conicWeight, quads, 1);
+
+	int d = compute_int_quad_dist(quads);
+	int level = (35 - SkCLZ(d)) >> 1;
+	if (level > kMaxQuadSubdivideLevel)
+	{
+		level = kMaxQuadSubdivideLevel;
+	}
+	hairquad_points(quads, level, points);
+
+
+	d = compute_int_quad_dist(&quads[2]);
+	level = (35 - SkCLZ(d)) >> 1;
+	if (level > kMaxQuadSubdivideLevel)
+	{
+		level = kMaxQuadSubdivideLevel;
+	}
+	hairquad_points(&quads[2], level, points);
+}
+
+size_t SkScan::HairPathToPoints(const SkPath & path, SkPointLists & points)
+{
+	SkPath::Iter    iter(path, false);
+	SkPoint         pts[4];
+	SkPath::Verb    verb;
+	points.clear();
+	SkPointList * one_path = NULL;
+
+	while ((verb = iter.next(pts)) != SkPath::kDone_Verb)
+	{
+		switch (verb)
+		{
+		case SkPath::kMove_Verb:
+		{
+			points.push_back(SkPointList());
+			one_path = &points.back();
+			one_path->push_back(pts[0]);
+			break;
+		}
+		case SkPath::kLine_Verb:
+		{
+			one_path->push_back(pts[1]);
+			break;
+		}
+		case SkPath::kQuad_Verb:
+		{
+			int d = compute_int_quad_dist(pts);
+			int level = (35 - SkCLZ(d)) >> 1;
+			if (level > kMaxQuadSubdivideLevel)
+			{
+				level = kMaxQuadSubdivideLevel;
+			}
+			hairquad_points(pts, level, *one_path);
+			break;
+		}
+		case SkPath::kCubic_Verb:
+		{
+			haircubic_points(pts, kMaxCubicSubdivideLevel, *one_path);
+			break;
+		}
+		case SkPath::kConic_Verb:
+		{
+			hairconic_points(pts, iter.conicWeight(), *one_path);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+
+	return points.size();
 }

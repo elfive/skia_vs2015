@@ -1,0 +1,110 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSK_GAMMA_APPLY_TO_A8 -DSK_ENABLE_DISCRETE_GPU -DGR_TEST_UTILS=1 -DSK_SUPPORT_GPU=0
+include_dirs = -I../../experimental "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../samplecode -I../../include/private -I../../src/c -I../../src/codec -I../../src/core -I../../src/effects -I../../src/fonts -I../../src/image -I../../src/images -I../../src/lazy -I../../src/opts -I../../src/pathops -I../../src/pdf -I../../src/ports -I../../src/sfnt -I../../src/shaders -I../../src/shaders/gradients -I../../src/sksl -I../../src/utils -I../../src/utils/win -I../../src/xml -I../../third_party/gif -I../../experimental/svg/model -I../../tools/flags -I../../gm -I../../tools -I../../tools/debugger -I../../tools/timer -I../../tools/trace -I../../third_party/externals/jsoncpp/include -I../../include/views -I../../include/android -I../../include/c -I../../include/codec -I../../include/config -I../../include/core -I../../include/effects -I../../include/encode -I../../include/gpu -I../../include/gpu/gl -I../../include/pathops -I../../include/ports -I../../include/svg -I../../include/utils -I../../include/utils/mac
+cflags = /FS /bigobj /WX /utf-8 /W3 /wd4244 /wd4267 /wd4800 /wd4291 /Zi /MDd
+cflags_cc = /GR-
+label_name = samples
+root_out_dir = .
+target_out_dir = obj
+target_output_name = samples
+
+build obj/samplecode/samples.ClockFaceView.obj: cxx ../../samplecode/ClockFaceView.cpp
+build obj/samplecode/samples.GMSampleView.obj: cxx ../../samplecode/GMSampleView.cpp
+build obj/samplecode/samples.OverView.obj: cxx ../../samplecode/OverView.cpp
+build obj/samplecode/samples.PerlinPatch.obj: cxx ../../samplecode/PerlinPatch.cpp
+build obj/samplecode/samples.Sample2PtRadial.obj: cxx ../../samplecode/Sample2PtRadial.cpp
+build obj/samplecode/samples.SampleAAClip.obj: cxx ../../samplecode/SampleAAClip.cpp
+build obj/samplecode/samples.SampleAAGeometry.obj: cxx ../../samplecode/SampleAAGeometry.cpp
+build obj/samplecode/samples.SampleAARectModes.obj: cxx ../../samplecode/SampleAARectModes.cpp
+build obj/samplecode/samples.SampleAARects.obj: cxx ../../samplecode/SampleAARects.cpp
+build obj/samplecode/samples.SampleAll.obj: cxx ../../samplecode/SampleAll.cpp
+build obj/samplecode/samples.SampleAndroidShadows.obj: cxx ../../samplecode/SampleAndroidShadows.cpp
+build obj/samplecode/samples.SampleAnimatedText.obj: cxx ../../samplecode/SampleAnimatedText.cpp
+build obj/samplecode/samples.SampleAnimBlur.obj: cxx ../../samplecode/SampleAnimBlur.cpp
+build obj/samplecode/samples.SampleArc.obj: cxx ../../samplecode/SampleArc.cpp
+build obj/samplecode/samples.SampleAtlas.obj: cxx ../../samplecode/SampleAtlas.cpp
+build obj/samplecode/samples.SampleBigBlur.obj: cxx ../../samplecode/SampleBigBlur.cpp
+build obj/samplecode/samples.SampleBigGradient.obj: cxx ../../samplecode/SampleBigGradient.cpp
+build obj/samplecode/samples.SampleBitmapRect.obj: cxx ../../samplecode/SampleBitmapRect.cpp
+build obj/samplecode/samples.SampleBlur.obj: cxx ../../samplecode/SampleBlur.cpp
+build obj/samplecode/samples.SampleCCPRGeometry.obj: cxx ../../samplecode/SampleCCPRGeometry.cpp
+build obj/samplecode/samples.SampleCamera.obj: cxx ../../samplecode/SampleCamera.cpp
+build obj/samplecode/samples.SampleChart.obj: cxx ../../samplecode/SampleChart.cpp
+build obj/samplecode/samples.SampleChineseFling.obj: cxx ../../samplecode/SampleChineseFling.cpp
+build obj/samplecode/samples.SampleCircle.obj: cxx ../../samplecode/SampleCircle.cpp
+build obj/samplecode/samples.SampleClip.obj: cxx ../../samplecode/SampleClip.cpp
+build obj/samplecode/samples.SampleClipDrawMatch.obj: cxx ../../samplecode/SampleClipDrawMatch.cpp
+build obj/samplecode/samples.SampleClock.obj: cxx ../../samplecode/SampleClock.cpp
+build obj/samplecode/samples.SampleCode.obj: cxx ../../samplecode/SampleCode.cpp
+build obj/samplecode/samples.SampleColorFilter.obj: cxx ../../samplecode/SampleColorFilter.cpp
+build obj/samplecode/samples.SampleComplexClip.obj: cxx ../../samplecode/SampleComplexClip.cpp
+build obj/samplecode/samples.SampleConcavePaths.obj: cxx ../../samplecode/SampleConcavePaths.cpp
+build obj/samplecode/samples.SampleDegenerateTwoPtRadials.obj: cxx ../../samplecode/SampleDegenerateTwoPtRadials.cpp
+build obj/samplecode/samples.SampleDither.obj: cxx ../../samplecode/SampleDither.cpp
+build obj/samplecode/samples.SampleEffects.obj: cxx ../../samplecode/SampleEffects.cpp
+build obj/samplecode/samples.SampleEmboss.obj: cxx ../../samplecode/SampleEmboss.cpp
+build obj/samplecode/samples.SampleFatBits.obj: cxx ../../samplecode/SampleFatBits.cpp
+build obj/samplecode/samples.SampleFillType.obj: cxx ../../samplecode/SampleFillType.cpp
+build obj/samplecode/samples.SampleFilter2.obj: cxx ../../samplecode/SampleFilter2.cpp
+build obj/samplecode/samples.SampleFilterFuzz.obj: cxx ../../samplecode/SampleFilterFuzz.cpp
+build obj/samplecode/samples.SampleFilterQuality.obj: cxx ../../samplecode/SampleFilterQuality.cpp
+build obj/samplecode/samples.SampleFontScalerTest.obj: cxx ../../samplecode/SampleFontScalerTest.cpp
+build obj/samplecode/samples.SampleFuzz.obj: cxx ../../samplecode/SampleFuzz.cpp
+build obj/samplecode/samples.SampleGradients.obj: cxx ../../samplecode/SampleGradients.cpp
+build obj/samplecode/samples.SampleHairCurves.obj: cxx ../../samplecode/SampleHairCurves.cpp
+build obj/samplecode/samples.SampleHairline.obj: cxx ../../samplecode/SampleHairline.cpp
+build obj/samplecode/samples.SampleHairModes.obj: cxx ../../samplecode/SampleHairModes.cpp
+build obj/samplecode/samples.SampleHT.obj: cxx ../../samplecode/SampleHT.cpp
+build obj/samplecode/samples.SampleIdentityScale.obj: cxx ../../samplecode/SampleIdentityScale.cpp
+build obj/samplecode/samples.SampleLayerMask.obj: cxx ../../samplecode/SampleLayerMask.cpp
+build obj/samplecode/samples.SampleLayers.obj: cxx ../../samplecode/SampleLayers.cpp
+build obj/samplecode/samples.SampleLCD.obj: cxx ../../samplecode/SampleLCD.cpp
+build obj/samplecode/samples.SampleLines.obj: cxx ../../samplecode/SampleLines.cpp
+build obj/samplecode/samples.SampleManyRects.obj: cxx ../../samplecode/SampleManyRects.cpp
+build obj/samplecode/samples.SampleMeasure.obj: cxx ../../samplecode/SampleMeasure.cpp
+build obj/samplecode/samples.SampleMegaStroke.obj: cxx ../../samplecode/SampleMegaStroke.cpp
+build obj/samplecode/samples.SamplePatch.obj: cxx ../../samplecode/SamplePatch.cpp
+build obj/samplecode/samples.SamplePath.obj: cxx ../../samplecode/SamplePath.cpp
+build obj/samplecode/samples.SamplePathText.obj: cxx ../../samplecode/SamplePathText.cpp
+build obj/samplecode/samples.SamplePathClip.obj: cxx ../../samplecode/SamplePathClip.cpp
+build obj/samplecode/samples.SamplePathEffects.obj: cxx ../../samplecode/SamplePathEffects.cpp
+build obj/samplecode/samples.SamplePathFinder.obj: cxx ../../samplecode/SamplePathFinder.cpp
+build obj/samplecode/samples.SamplePathFuzz.obj: cxx ../../samplecode/SamplePathFuzz.cpp
+build obj/samplecode/samples.SamplePathOverstroke.obj: cxx ../../samplecode/SamplePathOverstroke.cpp
+build obj/samplecode/samples.SamplePdfFileViewer.obj: cxx ../../samplecode/SamplePdfFileViewer.cpp
+build obj/samplecode/samples.SamplePoints.obj: cxx ../../samplecode/SamplePoints.cpp
+build obj/samplecode/samples.SamplePolyToPoly.obj: cxx ../../samplecode/SamplePolyToPoly.cpp
+build obj/samplecode/samples.SampleQuadStroker.obj: cxx ../../samplecode/SampleQuadStroker.cpp
+build obj/samplecode/samples.SampleRectanizer.obj: cxx ../../samplecode/SampleRectanizer.cpp
+build obj/samplecode/samples.SampleRegion.obj: cxx ../../samplecode/SampleRegion.cpp
+build obj/samplecode/samples.SampleRepeatTile.obj: cxx ../../samplecode/SampleRepeatTile.cpp
+build obj/samplecode/samples.SampleShaders.obj: cxx ../../samplecode/SampleShaders.cpp
+build obj/samplecode/samples.SampleShaderText.obj: cxx ../../samplecode/SampleShaderText.cpp
+build obj/samplecode/samples.SampleShadowColor.obj: cxx ../../samplecode/SampleShadowColor.cpp
+build obj/samplecode/samples.SampleShadowReference.obj: cxx ../../samplecode/SampleShadowReference.cpp
+build obj/samplecode/samples.SampleShadowUtils.obj: cxx ../../samplecode/SampleShadowUtils.cpp
+build obj/samplecode/samples.SampleShip.obj: cxx ../../samplecode/SampleShip.cpp
+build obj/samplecode/samples.SampleSlides.obj: cxx ../../samplecode/SampleSlides.cpp
+build obj/samplecode/samples.SampleStringArt.obj: cxx ../../samplecode/SampleStringArt.cpp
+build obj/samplecode/samples.SampleStrokePath.obj: cxx ../../samplecode/SampleStrokePath.cpp
+build obj/samplecode/samples.SampleStrokeRect.obj: cxx ../../samplecode/SampleStrokeRect.cpp
+build obj/samplecode/samples.SampleSubpixelTranslate.obj: cxx ../../samplecode/SampleSubpixelTranslate.cpp
+build obj/samplecode/samples.SampleSVGFile.obj: cxx ../../samplecode/SampleSVGFile.cpp
+build obj/samplecode/samples.SampleSVGPong.obj: cxx ../../samplecode/SampleSVGPong.cpp
+build obj/samplecode/samples.SampleText.obj: cxx ../../samplecode/SampleText.cpp
+build obj/samplecode/samples.SampleTextAlpha.obj: cxx ../../samplecode/SampleTextAlpha.cpp
+build obj/samplecode/samples.SampleTextBox.obj: cxx ../../samplecode/SampleTextBox.cpp
+build obj/samplecode/samples.SampleTextOnPath.obj: cxx ../../samplecode/SampleTextOnPath.cpp
+build obj/samplecode/samples.SampleTextureDomain.obj: cxx ../../samplecode/SampleTextureDomain.cpp
+build obj/samplecode/samples.SampleTiling.obj: cxx ../../samplecode/SampleTiling.cpp
+build obj/samplecode/samples.SampleUnpremul.obj: cxx ../../samplecode/SampleUnpremul.cpp
+build obj/samplecode/samples.SampleVertices.obj: cxx ../../samplecode/SampleVertices.cpp
+build obj/samplecode/samples.SampleWritePixels.obj: cxx ../../samplecode/SampleWritePixels.cpp
+build obj/samplecode/samples.SampleXfer.obj: cxx ../../samplecode/SampleXfer.cpp
+build obj/samplecode/samples.SampleXfermodesBlur.obj: cxx ../../samplecode/SampleXfermodesBlur.cpp
+build obj/samplecode/samples.vertexdump.obj: cxx ../../samplecode/vertexdump.cpp
+build obj/experimental/samples.SkSetPoly3To3.obj: cxx ../../experimental/SkSetPoly3To3.cpp
+build obj/experimental/samples.SkSetPoly3To3_A.obj: cxx ../../experimental/SkSetPoly3To3_A.cpp
+build obj/experimental/samples.SkSetPoly3To3_D.obj: cxx ../../experimental/SkSetPoly3To3_D.cpp
+build obj/src/core/samples.SkThreadedBMPDevice.obj: cxx ../../src/core/SkThreadedBMPDevice.cpp
+
+build obj/samples.stamp: stamp obj/samplecode/samples.ClockFaceView.obj obj/samplecode/samples.GMSampleView.obj obj/samplecode/samples.OverView.obj obj/samplecode/samples.PerlinPatch.obj obj/samplecode/samples.Sample2PtRadial.obj obj/samplecode/samples.SampleAAClip.obj obj/samplecode/samples.SampleAAGeometry.obj obj/samplecode/samples.SampleAARectModes.obj obj/samplecode/samples.SampleAARects.obj obj/samplecode/samples.SampleAll.obj obj/samplecode/samples.SampleAndroidShadows.obj obj/samplecode/samples.SampleAnimatedText.obj obj/samplecode/samples.SampleAnimBlur.obj obj/samplecode/samples.SampleArc.obj obj/samplecode/samples.SampleAtlas.obj obj/samplecode/samples.SampleBigBlur.obj obj/samplecode/samples.SampleBigGradient.obj obj/samplecode/samples.SampleBitmapRect.obj obj/samplecode/samples.SampleBlur.obj obj/samplecode/samples.SampleCCPRGeometry.obj obj/samplecode/samples.SampleCamera.obj obj/samplecode/samples.SampleChart.obj obj/samplecode/samples.SampleChineseFling.obj obj/samplecode/samples.SampleCircle.obj obj/samplecode/samples.SampleClip.obj obj/samplecode/samples.SampleClipDrawMatch.obj obj/samplecode/samples.SampleClock.obj obj/samplecode/samples.SampleCode.obj obj/samplecode/samples.SampleColorFilter.obj obj/samplecode/samples.SampleComplexClip.obj obj/samplecode/samples.SampleConcavePaths.obj obj/samplecode/samples.SampleDegenerateTwoPtRadials.obj obj/samplecode/samples.SampleDither.obj obj/samplecode/samples.SampleEffects.obj obj/samplecode/samples.SampleEmboss.obj obj/samplecode/samples.SampleFatBits.obj obj/samplecode/samples.SampleFillType.obj obj/samplecode/samples.SampleFilter2.obj obj/samplecode/samples.SampleFilterFuzz.obj obj/samplecode/samples.SampleFilterQuality.obj obj/samplecode/samples.SampleFontScalerTest.obj obj/samplecode/samples.SampleFuzz.obj obj/samplecode/samples.SampleGradients.obj obj/samplecode/samples.SampleHairCurves.obj obj/samplecode/samples.SampleHairline.obj obj/samplecode/samples.SampleHairModes.obj obj/samplecode/samples.SampleHT.obj obj/samplecode/samples.SampleIdentityScale.obj obj/samplecode/samples.SampleLayerMask.obj obj/samplecode/samples.SampleLayers.obj obj/samplecode/samples.SampleLCD.obj obj/samplecode/samples.SampleLines.obj obj/samplecode/samples.SampleManyRects.obj obj/samplecode/samples.SampleMeasure.obj obj/samplecode/samples.SampleMegaStroke.obj obj/samplecode/samples.SamplePatch.obj obj/samplecode/samples.SamplePath.obj obj/samplecode/samples.SamplePathText.obj obj/samplecode/samples.SamplePathClip.obj obj/samplecode/samples.SamplePathEffects.obj obj/samplecode/samples.SamplePathFinder.obj obj/samplecode/samples.SamplePathFuzz.obj obj/samplecode/samples.SamplePathOverstroke.obj obj/samplecode/samples.SamplePdfFileViewer.obj obj/samplecode/samples.SamplePoints.obj obj/samplecode/samples.SamplePolyToPoly.obj obj/samplecode/samples.SampleQuadStroker.obj obj/samplecode/samples.SampleRectanizer.obj obj/samplecode/samples.SampleRegion.obj obj/samplecode/samples.SampleRepeatTile.obj obj/samplecode/samples.SampleShaders.obj obj/samplecode/samples.SampleShaderText.obj obj/samplecode/samples.SampleShadowColor.obj obj/samplecode/samples.SampleShadowReference.obj obj/samplecode/samples.SampleShadowUtils.obj obj/samplecode/samples.SampleShip.obj obj/samplecode/samples.SampleSlides.obj obj/samplecode/samples.SampleStringArt.obj obj/samplecode/samples.SampleStrokePath.obj obj/samplecode/samples.SampleStrokeRect.obj obj/samplecode/samples.SampleSubpixelTranslate.obj obj/samplecode/samples.SampleSVGFile.obj obj/samplecode/samples.SampleSVGPong.obj obj/samplecode/samples.SampleText.obj obj/samplecode/samples.SampleTextAlpha.obj obj/samplecode/samples.SampleTextBox.obj obj/samplecode/samples.SampleTextOnPath.obj obj/samplecode/samples.SampleTextureDomain.obj obj/samplecode/samples.SampleTiling.obj obj/samplecode/samples.SampleUnpremul.obj obj/samplecode/samples.SampleVertices.obj obj/samplecode/samples.SampleWritePixels.obj obj/samplecode/samples.SampleXfer.obj obj/samplecode/samples.SampleXfermodesBlur.obj obj/samplecode/samples.vertexdump.obj obj/experimental/samples.SkSetPoly3To3.obj obj/experimental/samples.SkSetPoly3To3_A.obj obj/experimental/samples.SkSetPoly3To3_D.obj obj/src/core/samples.SkThreadedBMPDevice.obj || obj/experimental_svg_model.stamp obj/flags.stamp obj/gm.stamp obj/tool_utils.stamp obj/views.stamp obj/xml.stamp ./skia.lib obj/gpu_tool_utils.stamp obj/third_party/jsoncpp/jsoncpp.stamp obj/common_flags.stamp obj/third_party/libpng/libpng.stamp obj/third_party/zlib/zlib.stamp obj/third_party/zlib/zlib_x86.stamp

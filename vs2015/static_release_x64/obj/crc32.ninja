@@ -1,0 +1,9 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DNDEBUG
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt"
+label_name = crc32
+root_out_dir = .
+target_out_dir = obj
+target_output_name = crc32
+
+
+build obj/crc32.stamp: stamp

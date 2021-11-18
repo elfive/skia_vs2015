@@ -1,0 +1,63 @@
+rule cc
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/cl.exe /nologo /FC @${out}.rsp /c ${in} /Fo${out} /Fd"${target_out_dir}/${label_name}_c.pdb"
+  description = compile ${in}
+  rspfile = ${out}.rsp
+  rspfile_content = ${defines} ${include_dirs} ${cflags} ${cflags_c}
+  deps = msvc
+rule cxx
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/cl.exe /nologo /FC @${out}.rsp /c ${in} /Fo${out} /Fd"${target_out_dir}/${label_name}_c.pdb"
+  description = compile ${in}
+  rspfile = ${out}.rsp
+  rspfile_content = ${defines} ${include_dirs} ${cflags} ${cflags_cc}
+  deps = msvc
+rule asm
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/ml64.exe /nologo /c /Fo ${out} ${in}
+  description = assemble ${in}
+rule alink
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/lib.exe /nologo /ignore:4221 ${arflags} /OUT:${out} @${out}.rsp
+  description = link ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in_newline}
+rule solink
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/link.exe /nologo /IMPLIB:${output_dir}/${target_output_name}${output_extension}.lib /DLL /OUT:${output_dir}/${target_output_name}${output_extension} /PDB:${output_dir}/${target_output_name}${output_extension}.pdb @${output_dir}/${target_output_name}${output_extension}.rsp
+  description = link ${out}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in_newline} ${libs} ${solibs} ${ldflags}
+  restat = 1
+rule link
+  command = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/link.exe /nologo /OUT:${root_out_dir}/${target_output_name}${output_extension} /PDB:${root_out_dir}/${target_output_name}${output_extension}.pdb @${root_out_dir}/${target_output_name}${output_extension}.rsp
+  description = link ${out}
+  rspfile = ${root_out_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in_newline} ${libs} ${solibs} ${ldflags}
+rule stamp
+  command = cmd.exe /c echo > ${out}
+  description = stamp ${out}
+rule copy
+  command = python.bat C:/Users/elfive/Desktop/skia/skia/gn/cp.py ${in} ${out}
+  description = copy ${in} ${out}
+
+subninja obj/arm64.ninja
+subninja obj/armv7.ninja
+subninja obj/avx.ninja
+build obj/compile_processors.stamp: stamp
+subninja obj/crc32.ninja
+subninja obj/effects.ninja
+subninja obj/fontmgr_android.ninja
+subninja obj/fontmgr_custom.ninja
+subninja obj/fontmgr_fontconfig.ninja
+subninja obj/fontmgr_fuchsia.ninja
+subninja obj/gpu.ninja
+subninja obj/heif.ninja
+subninja obj/jpeg.ninja
+subninja obj/none.ninja
+subninja obj/pdf.ninja
+subninja obj/png.ninja
+subninja obj/raw.ninja
+subninja obj/skia.ninja
+subninja obj/sse2.ninja
+subninja obj/sse41.ninja
+subninja obj/sse42.ninja
+subninja obj/ssse3.ninja
+subninja obj/typeface_freetype.ninja
+subninja obj/webp.ninja
+subninja obj/xml.ninja

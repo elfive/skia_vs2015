@@ -1,0 +1,26 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../third_party/externals/zlib
+cflags = /w /FS /bigobj /WX /utf-8 /Zi /MDd
+cflags_c =
+label_name = zlib
+root_out_dir = .
+target_out_dir = obj/third_party/zlib
+target_output_name = zlib
+
+build obj/third_party/externals/zlib/zlib.adler32.obj: cc ../../third_party/externals/zlib/adler32.c
+build obj/third_party/externals/zlib/zlib.compress.obj: cc ../../third_party/externals/zlib/compress.c
+build obj/third_party/externals/zlib/zlib.crc32.obj: cc ../../third_party/externals/zlib/crc32.c
+build obj/third_party/externals/zlib/zlib.deflate.obj: cc ../../third_party/externals/zlib/deflate.c
+build obj/third_party/externals/zlib/zlib.gzclose.obj: cc ../../third_party/externals/zlib/gzclose.c
+build obj/third_party/externals/zlib/zlib.gzlib.obj: cc ../../third_party/externals/zlib/gzlib.c
+build obj/third_party/externals/zlib/zlib.gzread.obj: cc ../../third_party/externals/zlib/gzread.c
+build obj/third_party/externals/zlib/zlib.gzwrite.obj: cc ../../third_party/externals/zlib/gzwrite.c
+build obj/third_party/externals/zlib/zlib.infback.obj: cc ../../third_party/externals/zlib/infback.c
+build obj/third_party/externals/zlib/zlib.inffast.obj: cc ../../third_party/externals/zlib/inffast.c
+build obj/third_party/externals/zlib/zlib.inflate.obj: cc ../../third_party/externals/zlib/inflate.c
+build obj/third_party/externals/zlib/zlib.inftrees.obj: cc ../../third_party/externals/zlib/inftrees.c
+build obj/third_party/externals/zlib/zlib.trees.obj: cc ../../third_party/externals/zlib/trees.c
+build obj/third_party/externals/zlib/zlib.uncompr.obj: cc ../../third_party/externals/zlib/uncompr.c
+build obj/third_party/externals/zlib/zlib.zutil.obj: cc ../../third_party/externals/zlib/zutil.c
+
+build obj/third_party/zlib/zlib.stamp: stamp obj/third_party/externals/zlib/zlib.adler32.obj obj/third_party/externals/zlib/zlib.compress.obj obj/third_party/externals/zlib/zlib.crc32.obj obj/third_party/externals/zlib/zlib.deflate.obj obj/third_party/externals/zlib/zlib.gzclose.obj obj/third_party/externals/zlib/zlib.gzlib.obj obj/third_party/externals/zlib/zlib.gzread.obj obj/third_party/externals/zlib/zlib.gzwrite.obj obj/third_party/externals/zlib/zlib.infback.obj obj/third_party/externals/zlib/zlib.inffast.obj obj/third_party/externals/zlib/zlib.inflate.obj obj/third_party/externals/zlib/zlib.inftrees.obj obj/third_party/externals/zlib/zlib.trees.obj obj/third_party/externals/zlib/zlib.uncompr.obj obj/third_party/externals/zlib/zlib.zutil.obj || obj/third_party/zlib/zlib_x86.stamp

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tools">
+      <UniqueIdentifier>{0E9715BA-57B3-F23F-1EED-56699DC72D4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\debugger">
+      <UniqueIdentifier>{6A24697E-05E5-F9AF-0D0C-32022573F86A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\timer">
+      <UniqueIdentifier>{069DE756-C9C5-66E5-4424-258B4E386D93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\trace">
+      <UniqueIdentifier>{DA8FC4DB-276B-C54F-B06B-B6A2091F4BFF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tools/AndroidSkDebugToStdOut.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/CrashHandler.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/LsanSuppressions.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/ProcStats.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/Resources.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/ThermalManager.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/UrlDataManager.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkDebugCanvas.cpp">
+      <Filter>tools\debugger</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkDrawCommand.cpp">
+      <Filter>tools\debugger</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkJsonWriteBuffer.cpp">
+      <Filter>tools\debugger</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkObjectParser.cpp">
+      <Filter>tools\debugger</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/picture_utils.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/random_parse_path.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/sk_tool_utils.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/sk_tool_utils_font.cpp">
+      <Filter>tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/timer/Timer.cpp">
+      <Filter>tools\timer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/trace/SkChromeTracingTracer.cpp">
+      <Filter>tools\trace</Filter>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkChromeTracingTracer.h">
+      <Filter>tools\trace</Filter>
+    </None>
+    <CustomBuild Include="../../../tools/trace/SkDebugfTracer.cpp">
+      <Filter>tools\trace</Filter>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkDebugfTracer.h">
+      <Filter>tools\trace</Filter>
+    </None>
+    <CustomBuild Include="../../../tools/trace/SkEventTracingPriv.cpp">
+      <Filter>tools\trace</Filter>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkEventTracingPriv.h">
+      <Filter>tools\trace</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fuzz">
+      <UniqueIdentifier>{E7AC4451-D0C4-53F9-D61B-B7E643692DFF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../fuzz/FilterFuzz.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzCanvas.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzDrawFunctions.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzGradients.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzParsePath.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzPathop.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/FuzzScaleToSides.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../fuzz/fuzz.cpp">
+      <Filter>fuzz</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

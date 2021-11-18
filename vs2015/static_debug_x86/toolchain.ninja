@@ -1,0 +1,105 @@
+rule cc
+  command = cmd /c vcvarsall.bat x86 && cl.exe /nologo /FC @${out}.rsp /c ${in} /Fo${out} /Fd"${target_out_dir}/${label_name}_c.pdb"
+  description = compile ${in}
+  rspfile = ${out}.rsp
+  rspfile_content = ${defines} ${include_dirs} ${cflags} ${cflags_c}
+  deps = msvc
+rule cxx
+  command = cmd /c vcvarsall.bat x86 && cl.exe /nologo /FC @${out}.rsp /c ${in} /Fo${out} /Fd"${target_out_dir}/${label_name}_c.pdb"
+  description = compile ${in}
+  rspfile = ${out}.rsp
+  rspfile_content = ${defines} ${include_dirs} ${cflags} ${cflags_cc}
+  deps = msvc
+rule asm
+  command = cmd /c vcvarsall.bat x86 && ml.exe /nologo /c /Fo ${out} ${in}
+  description = assemble ${in}
+rule alink
+  command = cmd /c vcvarsall.bat x86 && lib.exe /nologo /ignore:4221 ${arflags} /OUT:${out} @${out}.rsp
+  description = link ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in_newline}
+rule solink
+  command = cmd /c vcvarsall.bat x86 && link.exe /nologo /IMPLIB:${output_dir}/${target_output_name}${output_extension}.lib /DLL /OUT:${output_dir}/${target_output_name}${output_extension} /PDB:${output_dir}/${target_output_name}${output_extension}.pdb @${output_dir}/${target_output_name}${output_extension}.rsp
+  description = link ${out}
+  rspfile = ${output_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in_newline} ${libs} ${solibs} ${ldflags}
+  restat = 1
+rule link
+  command = cmd /c vcvarsall.bat x86 && link.exe /nologo /OUT:${root_out_dir}/${target_output_name}${output_extension} /PDB:${root_out_dir}/${target_output_name}${output_extension}.pdb @${root_out_dir}/${target_output_name}${output_extension}.rsp
+  description = link ${out}
+  rspfile = ${root_out_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in_newline} ${libs} ${solibs} ${ldflags}
+rule stamp
+  command = cmd.exe /c echo > ${out}
+  description = stamp ${out}
+rule copy
+  command = python.bat C:/Users/elfive/Desktop/skia/skia/gn/cp.py ${in} ${out}
+  description = copy ${in} ${out}
+
+subninja obj/SampleApp.ninja
+subninja obj/arm64.ninja
+subninja obj/armv7.ninja
+subninja obj/avx.ninja
+subninja obj/bench.ninja
+subninja obj/bookmaker.ninja
+subninja obj/colorspaceinfo.ninja
+subninja obj/common_flags.ninja
+build obj/compile_processors.stamp: stamp
+subninja obj/crc32.ninja
+subninja obj/create_flutter_test_images.ninja
+subninja obj/create_test_font.ninja
+subninja obj/dm.ninja
+subninja obj/dump_record.ninja
+subninja obj/effects.ninja
+subninja obj/experimental_svg_model.ninja
+subninja obj/flags.ninja
+subninja obj/fontmgr_android.ninja
+subninja obj/fontmgr_custom.ninja
+subninja obj/fontmgr_fontconfig.ninja
+subninja obj/fontmgr_fuchsia.ninja
+subninja obj/fuzz.ninja
+subninja obj/get_images_from_skps.ninja
+subninja obj/gm.ninja
+subninja obj/gpu.ninja
+subninja obj/gpu_tool_utils.ninja
+subninja obj/heif.ninja
+subninja obj/jpeg.ninja
+subninja obj/nanobench.ninja
+subninja obj/none.ninja
+subninja obj/ok.ninja
+subninja obj/pathops_unittest.ninja
+subninja obj/pdf.ninja
+subninja obj/png.ninja
+subninja obj/public.ninja
+subninja obj/raw.ninja
+subninja obj/samples.ninja
+subninja obj/skdiff.ninja
+subninja obj/skia.ninja
+rule ___skia.h___gn_toolchain_msvc__rule
+  command = C$:/Python27/python.exe ../../gn/find_headers.py gen/skia.h C$:/Users/elfive/Desktop/skia/skia/include/android C$:/Users/elfive/Desktop/skia/skia/include/c C$:/Users/elfive/Desktop/skia/skia/include/codec C$:/Users/elfive/Desktop/skia/skia/include/config C$:/Users/elfive/Desktop/skia/skia/include/core C$:/Users/elfive/Desktop/skia/skia/include/effects C$:/Users/elfive/Desktop/skia/skia/include/encode C$:/Users/elfive/Desktop/skia/skia/include/gpu C$:/Users/elfive/Desktop/skia/skia/include/gpu/gl C$:/Users/elfive/Desktop/skia/skia/include/pathops C$:/Users/elfive/Desktop/skia/skia/include/ports C$:/Users/elfive/Desktop/skia/skia/include/svg C$:/Users/elfive/Desktop/skia/skia/include/utils C$:/Users/elfive/Desktop/skia/skia/include/utils/mac
+  description = ACTION //:skia.h(//gn/toolchain:msvc)
+  restat = 1
+
+build gen/skia.h: ___skia.h___gn_toolchain_msvc__rule | ../../gn/find_headers.py
+  depfile = gen/skia.h.deps
+
+build obj/skia.h.stamp: stamp gen/skia.h
+subninja obj/skiaserve.ninja
+subninja obj/skp_parser.ninja
+subninja obj/skpinfo.ninja
+subninja obj/sktexttopdf.ninja
+subninja obj/sse2.ninja
+subninja obj/sse41.ninja
+subninja obj/sse42.ninja
+subninja obj/ssse3.ninja
+subninja obj/tests.ninja
+subninja obj/tool_utils.ninja
+subninja obj/typeface_freetype.ninja
+subninja obj/views.ninja
+subninja obj/webp.ninja
+subninja obj/xml.ninja
+subninja obj/third_party/jsoncpp/jsoncpp.ninja
+subninja obj/third_party/libmicrohttpd/libmicrohttpd.ninja
+subninja obj/third_party/libpng/libpng.ninja
+subninja obj/third_party/zlib/zlib.ninja
+subninja obj/third_party/zlib/zlib_x86.ninja

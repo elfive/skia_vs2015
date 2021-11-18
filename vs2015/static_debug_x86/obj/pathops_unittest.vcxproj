@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F83A7509-3DB3-17EE-D9F6-FAD0C75D504C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pathops_unittest</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../tools/flags;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tests/PathOpsAngleIdeas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsAngleIdeas.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsAngleIdeas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsAngleTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsAngleTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsAngleTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBattles.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsBattles.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsBattles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBoundsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsBoundsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsBoundsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderConicTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsBuilderConicTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsBuilderConicTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuilderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsBuilderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsBuilderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsBuildUseTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsBuildUseTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsBuildUseTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsChalkboardTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsChalkboardTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsChalkboardTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsConicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsConicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsConicLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsConicLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsConicQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsConicQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsConicQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicConicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicConicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicConicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicIntersectionTestData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicIntersectionTestData.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicIntersectionTestData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionIdeas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicLineIntersectionIdeas.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicLineIntersectionIdeas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsCubicReduceOrderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsCubicReduceOrderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsCubicReduceOrderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDCubicTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDCubicTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDCubicTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDebug.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDebug.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDebug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDLineTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDLineTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDLineTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDPointTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDPointTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDPointTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDRectTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDRectTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDRectTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsDVectorTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsDVectorTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsDVectorTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsExtendedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsExtendedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsExtendedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsFuzz763Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsFuzz763Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsFuzz763Test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsInverseTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsInverseTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsInverseTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsIssue3651.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsIssue3651.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsIssue3651.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsLineParametetersTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsLineParametetersTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsLineParametetersTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCircleThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsOpCircleThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsOpCircleThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpCubicThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsOpCubicThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsOpCubicThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpLoopThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsOpLoopThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsOpLoopThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpRectThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsOpRectThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsOpRectThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsOpTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsOpTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsOpTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsQuadIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsQuadIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadIntersectionTestData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsQuadIntersectionTestData.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsQuadIntersectionTestData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsQuadLineIntersectionTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsQuadLineIntersectionTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadLineIntersectionThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsQuadLineIntersectionThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsQuadLineIntersectionThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsQuadReduceOrderTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsQuadReduceOrderTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsQuadReduceOrderTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyDegenerateThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyDegenerateThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyDegenerateThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyFailTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyFailTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyFailTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadralateralsThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyQuadralateralsThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyQuadralateralsThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyQuadThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyQuadThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyQuadThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyRectThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyRectThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyRectThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSimplifyTrianglesThreadedTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSimplifyTrianglesThreadedTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSimplifyTrianglesThreadedTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsSkpTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsSkpTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsSkpTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTestCommon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsTestCommon.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsTestCommon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreadedCommon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsThreadedCommon.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsThreadedCommon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsThreeWayTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsThreeWayTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsThreeWayTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTigerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsTigerTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsTigerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTightBoundsTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsTightBoundsTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsTightBoundsTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/PathOpsTypesTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.PathOpsTypesTest.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.PathOpsTypesTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/skia_test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.skia_test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.skia_test.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tests/Test.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tests/pathops_unittest.Test.obj</Command>
+      <Outputs>$(OutDir)obj/tests/pathops_unittest.Test.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) ./pathops_unittest.exe" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean ./pathops_unittest.exe" />
+  </Target>
+</Project>

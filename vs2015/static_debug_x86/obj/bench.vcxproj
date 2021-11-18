@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1D5B559F-DDB3-99A1-9C15-EAF62BE8557D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>bench</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../bench;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../tools/flags;../../../gm;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../bench/AAClipBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.AAClipBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.AAClipBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/AlternatingColorPatternBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.AlternatingColorPatternBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.AlternatingColorPatternBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/AndroidCodecBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.AndroidCodecBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.AndroidCodecBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BenchLogger.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BenchLogger.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BenchLogger.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/Benchmark.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.Benchmark.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.Benchmark.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BezierBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BezierBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BezierBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BigPathBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BigPathBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BigPathBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BitmapBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BitmapBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BitmapBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BitmapRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BitmapRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BitmapRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BitmapRegionDecoderBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BitmapRegionDecoderBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BitmapRegionDecoderBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlendmodeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlendmodeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlendmodeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurImageFilterBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurImageFilterBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurImageFilterBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurOccludedRRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurOccludedRRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurOccludedRRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurRectsBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurRectsBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurRectsBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/BlurRoundRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.BlurRoundRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.BlurRoundRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ChartBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ChartBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ChartBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ChecksumBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ChecksumBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ChecksumBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ChromeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ChromeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ChromeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ClipMaskBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ClipMaskBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ClipMaskBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/CmapBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.CmapBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.CmapBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/CodecBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.CodecBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.CodecBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ColorCanvasDrawBitmapBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ColorCanvasDrawBitmapBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ColorCanvasDrawBitmapBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ColorCodecBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ColorCodecBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ColorCodecBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ColorFilterBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ColorFilterBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ColorFilterBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ColorPrivBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ColorPrivBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ColorPrivBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ControlBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ControlBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ControlBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/CoverageBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.CoverageBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.CoverageBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/CubicKLMBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.CubicKLMBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.CubicKLMBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/DashBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.DashBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.DashBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/DisplacementBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.DisplacementBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.DisplacementBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/DrawBitmapAABench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.DrawBitmapAABench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.DrawBitmapAABench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/DrawLatticeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.DrawLatticeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.DrawLatticeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/EncoderBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.EncoderBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.EncoderBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/FontCacheBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.FontCacheBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.FontCacheBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/FontScalerBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.FontScalerBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.FontScalerBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/FSRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.FSRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.FSRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GameBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GameBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GameBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GeometryBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GeometryBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GeometryBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GLBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GLBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GLBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GLInstancedArraysBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GLInstancedArraysBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GLInstancedArraysBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GLVec4ScalarBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GLVec4ScalarBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GLVec4ScalarBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GLVertexAttributesBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GLVertexAttributesBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GLVertexAttributesBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GMBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GMBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GMBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GradientBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GradientBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GradientBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GrMemoryPoolBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GrMemoryPoolBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GrMemoryPoolBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GrMipMapBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GrMipMapBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GrMipMapBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/GrResourceCacheBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.GrResourceCacheBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.GrResourceCacheBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/HairlinePathBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.HairlinePathBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.HairlinePathBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/HardStopGradientBench_ScaleNumColors.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.HardStopGradientBench_ScaleNumColors.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.HardStopGradientBench_ScaleNumColors.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/HardStopGradientBench_ScaleNumHardStops.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.HardStopGradientBench_ScaleNumHardStops.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.HardStopGradientBench_ScaleNumHardStops.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/HardStopGradientBench_SpecialHardStops.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.HardStopGradientBench_SpecialHardStops.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.HardStopGradientBench_SpecialHardStops.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ImageBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ImageBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ImageBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ImageCacheBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ImageCacheBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ImageCacheBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ImageCacheBudgetBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ImageCacheBudgetBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ImageCacheBudgetBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ImageFilterCollapse.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ImageFilterCollapse.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ImageFilterCollapse.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ImageFilterDAGBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ImageFilterDAGBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ImageFilterDAGBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/InterpBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.InterpBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.InterpBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/LightingBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.LightingBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.LightingBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/LineBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.LineBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.LineBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MagnifierBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MagnifierBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MagnifierBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MathBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MathBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MathBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/Matrix44Bench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.Matrix44Bench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.Matrix44Bench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MatrixBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MatrixBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MatrixBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MatrixConvolutionBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MatrixConvolutionBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MatrixConvolutionBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MeasureBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MeasureBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MeasureBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MemsetBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MemsetBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MemsetBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MergeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MergeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MergeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MipMapBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MipMapBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MipMapBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MorphologyBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MorphologyBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MorphologyBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/MutexBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.MutexBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.MutexBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/pack_int_uint16_t_Bench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.pack_int_uint16_t_Bench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.pack_int_uint16_t_Bench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PatchBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PatchBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PatchBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PathBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PathBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PathBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PathIterBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PathIterBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PathIterBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PathTextBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PathTextBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PathTextBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PDFBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PDFBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PDFBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PerlinNoiseBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PerlinNoiseBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PerlinNoiseBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PictureNestingBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PictureNestingBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PictureNestingBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PictureOverheadBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PictureOverheadBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PictureOverheadBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PicturePlaybackBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PicturePlaybackBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PicturePlaybackBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/PremulAndUnpremulAlphaOpsBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.PremulAndUnpremulAlphaOpsBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.PremulAndUnpremulAlphaOpsBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/QuickRejectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.QuickRejectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.QuickRejectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ReadPixBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ReadPixBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ReadPixBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RecordingBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RecordingBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RecordingBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RectanizerBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RectanizerBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RectanizerBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RectoriBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RectoriBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RectoriBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RefCntBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RefCntBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RefCntBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RegionBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RegionBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RegionBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RegionContainBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RegionContainBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RegionContainBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RepeatTileBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RepeatTileBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RepeatTileBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RotatedRectBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RotatedRectBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RotatedRectBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/RTreeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.RTreeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.RTreeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ScalarBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ScalarBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ScalarBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ShaderMaskBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ShaderMaskBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ShaderMaskBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ShadowBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ShadowBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ShadowBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/ShapesBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.ShapesBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.ShapesBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/Sk4fBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.Sk4fBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.Sk4fBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SkGlyphCacheBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SkGlyphCacheBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SkGlyphCacheBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SKPAnimationBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SKPAnimationBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SKPAnimationBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SKPBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SKPBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SKPBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SkRasterPipelineBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SkRasterPipelineBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SkRasterPipelineBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/StreamBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.StreamBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.StreamBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SortBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SortBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SortBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/StrokeBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.StrokeBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.StrokeBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/SwizzleBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.SwizzleBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.SwizzleBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TableBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TableBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TableBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TextBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TextBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TextBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TextBlobBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TextBlobBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TextBlobBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TileBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TileBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TileBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TileImageFilterBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TileImageFilterBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TileImageFilterBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/TopoSortBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.TopoSortBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.TopoSortBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/VertBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.VertBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.VertBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/WritePixelsBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.WritePixelsBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.WritePixelsBench.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../bench/WriterBench.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/bench/bench.WriterBench.obj</Command>
+      <Outputs>$(OutDir)obj/bench/bench.WriterBench.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/bench.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/bench.stamp" />
+  </Target>
+</Project>

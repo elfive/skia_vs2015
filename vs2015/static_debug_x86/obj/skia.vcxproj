@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{05718BA8-B186-5E1D-B5D2-9AFAB8BFF94F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>skia</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_SUPPORT_GPU=0;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SKIA_IMPLEMENTATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../src/c/sk_paint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/c/skia.sk_paint.obj</Command>
+      <Outputs>$(OutDir)obj/src/c/skia.sk_paint.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/c/sk_surface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/c/skia.sk_surface.obj</Command>
+      <Outputs>$(OutDir)obj/src/c/skia.sk_surface.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/c/sk_types_priv.h" />
+    <None Include="../../../src/core/Sk4px.h" />
+    <CustomBuild Include="../../../src/core/SkAAClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkAAClip.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkAAClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkAnnotation.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkAnnotation.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkAnnotation.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkAdvancedTypefaceMetrics.h" />
+    <CustomBuild Include="../../../src/core/SkAlphaRuns.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkAlphaRuns.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkAlphaRuns.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkAntiRun.h" />
+    <CustomBuild Include="../../../src/core/SkATrace.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkATrace.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkATrace.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkATrace.h" />
+    <None Include="../../../src/core/SkAutoKern.h" />
+    <None Include="../../../src/core/SkAutoPixmapStorage.h" />
+    <CustomBuild Include="../../../src/core/SkAutoPixmapStorage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkAutoPixmapStorage.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkAutoPixmapStorage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBBHFactory.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBBHFactory.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBBHFactory.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBBoxHierarchy.h" />
+    <CustomBuild Include="../../../src/core/SkBigPicture.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBigPicture.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBigPicture.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmap.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBitmapCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapCache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBitmapController.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapController.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapController.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBitmapDevice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapDevice.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapDevice.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBitmapDevice.h" />
+    <CustomBuild Include="../../../src/core/SkBitmapProcState.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapProcState.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapProcState.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBitmapProcState.h" />
+    <None Include="../../../src/core/SkBitmapProcState_filter.h" />
+    <None Include="../../../src/core/SkBitmapProcState_matrix.h" />
+    <None Include="../../../src/core/SkBitmapProcState_matrix_template.h" />
+    <CustomBuild Include="../../../src/core/SkBitmapProcState_matrixProcs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapProcState_matrixProcs.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapProcState_matrixProcs.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBitmapProcState_procs.h" />
+    <None Include="../../../src/core/SkBitmapProcState_sample.h" />
+    <None Include="../../../src/core/SkBitmapProcState_shaderproc.h" />
+    <None Include="../../../src/core/SkBitmapProcState_utils.h" />
+    <CustomBuild Include="../../../src/core/SkBitmapProvider.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBitmapProvider.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBitmapProvider.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBitmapProvider.h" />
+    <CustomBuild Include="../../../src/core/SkBlendMode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlendMode.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlendMode.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBlitBWMaskTemplate.h" />
+    <None Include="../../../src/core/SkBlitMask.h" />
+    <CustomBuild Include="../../../src/core/SkBlitMask_D32.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitMask_D32.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitMask_D32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBlitRow.h" />
+    <CustomBuild Include="../../../src/core/SkBlitRow_D32.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitRow_D32.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitRow_D32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkBlitter.h" />
+    <CustomBuild Include="../../../src/core/SkBlitter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBlitter_A8.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitter_A8.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitter_A8.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBlitter_ARGB32.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitter_ARGB32.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitter_ARGB32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBlitter_Sprite.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlitter_Sprite.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlitter_Sprite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBlurImageFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBlurImageFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBlurImageFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkBuffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkCachedData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkCachedData.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkCachedData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkCanvas.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkCanvasPriv.h" />
+    <None Include="../../../src/core/SkCoverageDelta.h" />
+    <CustomBuild Include="../../../src/core/SkCoverageDelta.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkCoverageDelta.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkCoverageDelta.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkClipStack.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkClipStack.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkClipStack.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkClipStack.h" />
+    <CustomBuild Include="../../../src/core/SkClipStackDevice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkClipStackDevice.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkClipStackDevice.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkClipStackDevice.h" />
+    <CustomBuild Include="../../../src/core/SkColor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColor.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorLookUpTable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorLookUpTable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorLookUpTable.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorLookUpTable.h" />
+    <CustomBuild Include="../../../src/core/SkColorMatrixFilterRowMajor255.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorMatrixFilterRowMajor255.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorMatrixFilterRowMajor255.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorMatrixFilterRowMajor255.h" />
+    <CustomBuild Include="../../../src/core/SkColorSpace.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpace.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpace.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorSpace_A2B.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpace_A2B.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpace_A2B.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorSpace_A2B.h" />
+    <CustomBuild Include="../../../src/core/SkColorSpace_XYZ.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpace_XYZ.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpace_XYZ.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorSpace_XYZ.h" />
+    <CustomBuild Include="../../../src/core/SkColorSpace_ICC.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpace_ICC.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpace_ICC.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorSpaceXform.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpaceXform.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpaceXform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorSpaceXformCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpaceXformCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpaceXformCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkColorSpaceXformer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpaceXformer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpaceXformer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorSpaceXformer.h" />
+    <CustomBuild Include="../../../src/core/SkColorSpaceXformImageGenerator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpaceXformImageGenerator.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpaceXformImageGenerator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorSpaceXformImageGenerator.h" />
+    <CustomBuild Include="../../../src/core/SkColorSpaceXform_A2B.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorSpaceXform_A2B.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorSpaceXform_A2B.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkColorSpaceXform_A2B.h" />
+    <CustomBuild Include="../../../src/core/SkColorTable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkColorTable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkColorTable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkConvertPixels.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkConvertPixels.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkConvertPixels.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkConvertPixels.h" />
+    <None Include="../../../src/core/SkCoreBlitters.h" />
+    <CustomBuild Include="../../../src/core/SkCpu.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkCpu.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkCpu.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkCpu.h" />
+    <CustomBuild Include="../../../src/core/SkCubicClipper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkCubicClipper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkCubicClipper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkCubicClipper.h" />
+    <CustomBuild Include="../../../src/core/SkData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkData.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDataTable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDataTable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDataTable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDebug.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDebug.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDebug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDeque.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDeque.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDeque.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDescriptor.h" />
+    <CustomBuild Include="../../../src/core/SkDevice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDevice.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDevice.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDevice.h" />
+    <CustomBuild Include="../../../src/core/SkDeviceLooper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDeviceLooper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDeviceLooper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDeviceProfile.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDeviceProfile.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDeviceProfile.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDiscardableMemory.h" />
+    <CustomBuild Include="../../../src/lazy/SkDiscardableMemoryPool.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/lazy/skia.SkDiscardableMemoryPool.obj</Command>
+      <Outputs>$(OutDir)obj/src/lazy/skia.SkDiscardableMemoryPool.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDistanceFieldGen.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDistanceFieldGen.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDistanceFieldGen.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDistanceFieldGen.h" />
+    <CustomBuild Include="../../../src/core/SkDither.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDither.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDither.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDither.h" />
+    <CustomBuild Include="../../../src/core/SkDocument.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDocument.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDocument.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDraw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDraw.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDraw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDraw_vertices.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDraw_vertices.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDraw_vertices.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDraw.h" />
+    <CustomBuild Include="../../../src/core/SkDrawable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDrawable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDrawable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkDrawLooper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDrawLooper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDrawLooper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDrawProcs.h" />
+    <CustomBuild Include="../../../src/core/SkDrawShadowInfo.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkDrawShadowInfo.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkDrawShadowInfo.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkDrawShadowInfo.h" />
+    <CustomBuild Include="../../../src/core/SkEdgeBuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkEdgeBuilder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkEdgeBuilder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkEdgeBuilder.h" />
+    <CustomBuild Include="../../../src/core/SkEdgeClipper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkEdgeClipper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkEdgeClipper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkEdgeClipper.h" />
+    <None Include="../../../src/core/SkEndian.h" />
+    <CustomBuild Include="../../../src/core/SkExecutor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkExecutor.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkExecutor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkAnalyticEdge.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkAnalyticEdge.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkAnalyticEdge.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkFDot6Constants.h" />
+    <CustomBuild Include="../../../src/core/SkFDot6Constants.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFDot6Constants.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFDot6Constants.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkEdge.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkEdge.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkEdge.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkEdge.h" />
+    <None Include="../../../src/core/SkFDot6.h" />
+    <None Include="../../../src/core/SkFindAndPlaceGlyph.h" />
+    <CustomBuild Include="../../../src/core/SkArenaAlloc.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkArenaAlloc.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkArenaAlloc.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkArenaAlloc.h" />
+    <CustomBuild Include="../../../src/core/SkFlattenable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFlattenable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFlattenable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFlattenableSerialization.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFlattenableSerialization.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFlattenableSerialization.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFont.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFont.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFont.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFontLCDConfig.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFontLCDConfig.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFontLCDConfig.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFontMgr.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFontMgr.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFontMgr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFontStyle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFontStyle.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFontStyle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkFontDescriptor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFontDescriptor.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFontDescriptor.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkFontDescriptor.h" />
+    <CustomBuild Include="../../../src/core/SkFontStream.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkFontStream.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkFontStream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkFontStream.h" />
+    <None Include="../../../src/core/SkFuzzLogging.h" />
+    <CustomBuild Include="../../../src/core/SkGeometry.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkGeometry.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkGeometry.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkGeometry.h" />
+    <CustomBuild Include="../../../src/core/SkGlobalInitialization_core.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkGlobalInitialization_core.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkGlobalInitialization_core.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkGlyph.h" />
+    <CustomBuild Include="../../../src/core/SkGlyphCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkGlyphCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkGlyphCache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkGlyphCache.h" />
+    <None Include="../../../src/core/SkGlyphCache_Globals.h" />
+    <None Include="../../../src/core/SkGpuBlurUtils.h" />
+    <CustomBuild Include="../../../src/core/SkGpuBlurUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkGpuBlurUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkGpuBlurUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkGraphics.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkGraphics.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkGraphics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkHalf.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkHalf.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkHalf.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkHalf.h" />
+    <CustomBuild Include="../../../src/core/SkICC.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkICC.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkICC.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkImageFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkImageFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkImageFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkImageFilterCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkImageFilterCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkImageFilterCache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkImageFilterCache.h" />
+    <CustomBuild Include="../../../src/core/SkImageInfo.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkImageInfo.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkImageInfo.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkImageCacherator.h" />
+    <CustomBuild Include="../../../src/core/SkImageGenerator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkImageGenerator.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkImageGenerator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkLineClipper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkLineClipper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkLineClipper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkLiteDL.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkLiteDL.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkLiteDL.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkLiteRecorder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkLiteRecorder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkLiteRecorder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkLocalMatrixImageFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkLocalMatrixImageFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkLocalMatrixImageFilter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkLocalMatrixImageFilter.h" />
+    <CustomBuild Include="../../../src/core/SkMD5.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMD5.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMD5.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMD5.h" />
+    <CustomBuild Include="../../../src/core/SkMallocPixelRef.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMallocPixelRef.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMallocPixelRef.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMask.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMask.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMask.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMaskBlurFilter.h" />
+    <CustomBuild Include="../../../src/core/SkMaskBlurFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMaskBlurFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMaskBlurFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMaskCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMaskCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMaskCache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMaskFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMaskFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMaskFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMaskGamma.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMaskGamma.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMaskGamma.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMaskGamma.h" />
+    <CustomBuild Include="../../../src/core/SkMath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMath.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMath.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMathPriv.h" />
+    <CustomBuild Include="../../../src/core/SkMatrix.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMatrix.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMatrix.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMatrix44.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMatrix44.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMatrix44.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMatrixImageFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMatrixImageFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMatrixImageFilter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMatrixImageFilter.h" />
+    <None Include="../../../src/core/SkMatrixUtils.h" />
+    <CustomBuild Include="../../../src/core/SkMetaData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMetaData.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMetaData.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMipMap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMipMap.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMipMap.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMipMap.h" />
+    <CustomBuild Include="../../../src/core/SkMiniRecorder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMiniRecorder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMiniRecorder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkMiniRecorder.h" />
+    <CustomBuild Include="../../../src/core/SkModeColorFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkModeColorFilter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkModeColorFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkMultiPictureDraw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkMultiPictureDraw.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkMultiPictureDraw.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkNextID.h" />
+    <CustomBuild Include="../../../src/core/SkLatticeIter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkLatticeIter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkLatticeIter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkLatticeIter.h" />
+    <None Include="../../../src/core/SkNx.h" />
+    <CustomBuild Include="../../../src/core/SkOpts.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkOpts.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkOpts.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkOpts.h" />
+    <None Include="../../../src/core/SkOrderedReadBuffer.h" />
+    <None Include="../../../src/core/SkOSFile.h" />
+    <CustomBuild Include="../../../src/core/SkOverdrawCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkOverdrawCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkOverdrawCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPaint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPaint.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPaint.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPaintDefaults.h" />
+    <CustomBuild Include="../../../src/core/SkPaintPriv.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPaintPriv.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPaintPriv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPaintPriv.h" />
+    <CustomBuild Include="../../../src/core/SkPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPathEffect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPathEffect.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPathEffect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPathMeasure.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPathMeasure.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPathMeasure.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPathPriv.h" />
+    <CustomBuild Include="../../../src/core/SkPathRef.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPathRef.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPathRef.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPicture.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPicture.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPicture.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPictureAnalyzer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureAnalyzer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureAnalyzer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPictureCommon.h" />
+    <CustomBuild Include="../../../src/core/SkPictureContentInfo.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureContentInfo.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureContentInfo.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPictureContentInfo.h" />
+    <CustomBuild Include="../../../src/core/SkPictureData.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureData.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureData.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPictureData.h" />
+    <CustomBuild Include="../../../src/core/SkPictureFlat.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureFlat.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureFlat.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPictureFlat.h" />
+    <CustomBuild Include="../../../src/core/SkPictureImageGenerator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureImageGenerator.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureImageGenerator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPicturePlayback.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPicturePlayback.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPicturePlayback.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPicturePlayback.h" />
+    <CustomBuild Include="../../../src/core/SkPictureRecord.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureRecord.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureRecord.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkPictureRecord.h" />
+    <CustomBuild Include="../../../src/core/SkPictureRecorder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPictureRecorder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPictureRecorder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPixelRef.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPixelRef.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPixelRef.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPixmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPixmap.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPixmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPoint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPoint.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPoint.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPoint3.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPoint3.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPoint3.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkPtrRecorder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkPtrRecorder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkPtrRecorder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkQuadClipper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkQuadClipper.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkQuadClipper.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkQuadClipper.h" />
+    <CustomBuild Include="../../../src/core/SkRasterClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRasterClip.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRasterClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRasterPipeline.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRasterPipeline.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRasterPipeline.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRasterPipelineBlitter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRasterPipelineBlitter.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRasterPipelineBlitter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRasterizer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRasterizer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRasterizer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkReadBuffer.h" />
+    <CustomBuild Include="../../../src/core/SkReadBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkReadBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkReadBuffer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkReader32.h" />
+    <CustomBuild Include="../../../src/core/SkRecord.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecord.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecord.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRecords.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecords.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecords.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkRecords.h" />
+    <CustomBuild Include="../../../src/core/SkRecordDraw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecordDraw.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecordDraw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRecordOpts.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecordOpts.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecordOpts.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkRecordOpts.h" />
+    <None Include="../../../src/core/SkRecordPattern.h" />
+    <CustomBuild Include="../../../src/core/SkRecordedDrawable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecordedDrawable.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecordedDrawable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRecorder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRecorder.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRecorder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRect.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRefDict.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRefDict.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRefDict.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRegion.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRegion.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRegion.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkRegionPriv.h" />
+    <CustomBuild Include="../../../src/core/SkRegion_path.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRegion_path.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRegion_path.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkResourceCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkResourceCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkResourceCache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRRect.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRRect.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkRTree.h" />
+    <CustomBuild Include="../../../src/core/SkRTree.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRTree.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRTree.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkRWBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkRWBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkRWBuffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScalar.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScalar.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScalar.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScalerContext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScalerContext.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScalerContext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkScalerContext.h" />
+    <CustomBuild Include="../../../src/core/SkScan.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkScan.h" />
+    <None Include="../../../src/core/SkScanPriv.h" />
+    <CustomBuild Include="../../../src/core/SkScan_AAAPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_AAAPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_AAAPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScan_DAAPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_DAAPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_DAAPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScan_AntiPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_AntiPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_AntiPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScan_Antihair.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_Antihair.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_Antihair.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScan_Hairline.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_Hairline.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_Hairline.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkScan_Path.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkScan_Path.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkScan_Path.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkSemaphore.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSemaphore.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSemaphore.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkSharedMutex.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSharedMutex.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSharedMutex.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkSharedMutex.h" />
+    <None Include="../../../src/core/SkSinglyLinkedList.h" />
+    <CustomBuild Include="../../../src/core/SkSpecialImage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSpecialImage.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSpecialImage.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkSpecialImage.h" />
+    <CustomBuild Include="../../../src/core/SkSpecialSurface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSpecialSurface.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSpecialSurface.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkSpecialSurface.h" />
+    <CustomBuild Include="../../../src/core/SkSpinlock.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSpinlock.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSpinlock.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkSpriteBlitter_ARGB32.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSpriteBlitter_ARGB32.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSpriteBlitter_ARGB32.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkSpriteBlitter.h" />
+    <CustomBuild Include="../../../src/core/SkStream.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkStream.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkStream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkStreamPriv.h" />
+    <CustomBuild Include="../../../src/core/SkString.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkString.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkString.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkStringUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkStringUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkStringUtils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkStroke.h" />
+    <CustomBuild Include="../../../src/core/SkStroke.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkStroke.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkStroke.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkStrokeRec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkStrokeRec.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkStrokeRec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkStrokerPriv.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkStrokerPriv.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkStrokerPriv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkStrokerPriv.h" />
+    <None Include="../../../src/core/SkSurfacePriv.h" />
+    <CustomBuild Include="../../../src/core/SkSwizzle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSwizzle.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSwizzle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkSRGB.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkSRGB.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkSRGB.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkTaskGroup.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTaskGroup.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTaskGroup.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTaskGroup.h" />
+    <None Include="../../../src/core/SkTDPQueue.h" />
+    <None Include="../../../src/core/SkTDynamicHash.h" />
+    <None Include="../../../src/core/SkTInternalLList.h" />
+    <CustomBuild Include="../../../src/core/SkTextBlob.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTextBlob.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTextBlob.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTextFormatParams.h" />
+    <None Include="../../../src/core/SkTextMapStateProc.h" />
+    <None Include="../../../src/core/SkTextToPathIter.h" />
+    <CustomBuild Include="../../../src/core/SkTime.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTime.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTime.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTDPQueue.h" />
+    <CustomBuild Include="../../../src/core/SkThreadID.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkThreadID.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkThreadID.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTLList.h" />
+    <CustomBuild Include="../../../src/core/SkTLS.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTLS.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTLS.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTMultiMap.h" />
+    <None Include="../../../src/core/SkTraceEvent.h" />
+    <None Include="../../../src/core/SkTraceEventCommon.h" />
+    <CustomBuild Include="../../../src/core/SkTSearch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTSearch.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTSearch.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTSort.h" />
+    <None Include="../../../src/core/SkTTopoSort.h" />
+    <CustomBuild Include="../../../src/core/SkTypeface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTypeface.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTypeface.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkTypefaceCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkTypefaceCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkTypefaceCache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkTypefaceCache.h" />
+    <None Include="../../../src/core/SkTypefacePriv.h" />
+    <CustomBuild Include="../../../src/core/SkUnPreMultiply.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkUnPreMultiply.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkUnPreMultiply.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkUtils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkUtils.h" />
+    <CustomBuild Include="../../../src/core/SkValidatingReadBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkValidatingReadBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkValidatingReadBuffer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkValidatingReadBuffer.h" />
+    <None Include="../../../src/core/SkValidationUtils.h" />
+    <CustomBuild Include="../../../src/core/SkVertices.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkVertices.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkVertices.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkVertState.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkVertState.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkVertState.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkWriteBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkWriteBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkWriteBuffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkWriter32.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkWriter32.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkWriter32.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkXfermode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkXfermode.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkXfermode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkXfermodeInterpretation.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkXfermodeInterpretation.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkXfermodeInterpretation.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkXfermodeInterpretation.h" />
+    <CustomBuild Include="../../../src/core/SkYUVPlanesCache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/skia.SkYUVPlanesCache.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/skia.SkYUVPlanesCache.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkYUVPlanesCache.h" />
+    <CustomBuild Include="../../../src/image/SkImage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/image/skia.SkImage.obj</Command>
+      <Outputs>$(OutDir)obj/src/image/skia.SkImage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/image/SkImage_Lazy.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/image/skia.SkImage_Lazy.obj</Command>
+      <Outputs>$(OutDir)obj/src/image/skia.SkImage_Lazy.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/image/SkImage_Raster.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/image/skia.SkImage_Raster.obj</Command>
+      <Outputs>$(OutDir)obj/src/image/skia.SkImage_Raster.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/image/SkSurface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/image/skia.SkSurface.obj</Command>
+      <Outputs>$(OutDir)obj/src/image/skia.SkSurface.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/image/SkSurface_Base.h" />
+    <CustomBuild Include="../../../src/image/SkSurface_Raster.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/image/skia.SkSurface_Raster.obj</Command>
+      <Outputs>$(OutDir)obj/src/image/skia.SkSurface_Raster.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pipe/SkPipeCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pipe/skia.SkPipeCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/pipe/skia.SkPipeCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pipe/SkPipeReader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pipe/skia.SkPipeReader.obj</Command>
+      <Outputs>$(OutDir)obj/src/pipe/skia.SkPipeReader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/shaders/SkBitmapProcShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkBitmapProcShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkBitmapProcShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkBitmapProcShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkColorFilterShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkColorFilterShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkColorFilterShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkColorFilterShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkColorShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkColorShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkColorShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkColorShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkComposeShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkComposeShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkComposeShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkComposeShader.h" />
+    <None Include="../../../src/shaders/SkEmptyShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkImageShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkImageShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkImageShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkImageShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkLocalMatrixShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkLocalMatrixShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkLocalMatrixShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkLocalMatrixShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkPictureShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkPictureShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkPictureShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkPictureShader.h" />
+    <CustomBuild Include="../../../src/shaders/SkShader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/shaders/skia.SkShader.obj</Command>
+      <Outputs>$(OutDir)obj/src/shaders/skia.SkShader.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/shaders/SkShaderBase.h" />
+    <None Include="../../../include/core/SkBBHFactory.h" />
+    <None Include="../../../include/core/SkBitmap.h" />
+    <None Include="../../../include/core/SkCanvas.h" />
+    <None Include="../../../include/core/SkColor.h" />
+    <None Include="../../../include/core/SkColorFilter.h" />
+    <None Include="../../../include/core/SkColorPriv.h" />
+    <None Include="../../../include/core/SkData.h" />
+    <None Include="../../../include/core/SkDeque.h" />
+    <None Include="../../../include/core/SkDrawable.h" />
+    <None Include="../../../include/core/SkDrawFilter.h" />
+    <None Include="../../../include/core/SkDrawLooper.h" />
+    <None Include="../../../include/core/SkFlattenable.h" />
+    <None Include="../../../include/core/SkFlattenableSerialization.h" />
+    <None Include="../../../include/core/SkFontArguments.h" />
+    <None Include="../../../include/core/SkFontLCDConfig.h" />
+    <None Include="../../../include/core/SkFontStyle.h" />
+    <None Include="../../../include/core/SkGraphics.h" />
+    <None Include="../../../include/core/SkImage.h" />
+    <None Include="../../../include/core/SkImageEncoder.h" />
+    <None Include="../../../include/core/SkImageFilter.h" />
+    <None Include="../../../include/core/SkImageInfo.h" />
+    <None Include="../../../include/core/SkMallocPixelRef.h" />
+    <None Include="../../../include/core/SkMask.h" />
+    <None Include="../../../include/core/SkMaskFilter.h" />
+    <None Include="../../../include/core/SkMath.h" />
+    <None Include="../../../include/core/SkMatrix.h" />
+    <None Include="../../../include/core/SkMatrix44.h" />
+    <None Include="../../../include/core/SkMetaData.h" />
+    <None Include="../../../include/core/SkMultiPictureDraw.h" />
+    <None Include="../../../include/core/SkOverdrawCanvas.h" />
+    <None Include="../../../include/core/SkPaint.h" />
+    <None Include="../../../include/core/SkPath.h" />
+    <None Include="../../../include/core/SkPathEffect.h" />
+    <None Include="../../../include/core/SkPathMeasure.h" />
+    <None Include="../../../include/core/SkPicture.h" />
+    <None Include="../../../include/core/SkPictureAnalyzer.h" />
+    <None Include="../../../include/core/SkPictureRecorder.h" />
+    <None Include="../../../include/core/SkPixelRef.h" />
+    <None Include="../../../include/core/SkPoint.h" />
+    <None Include="../../../include/core/SkPoint3.h" />
+    <None Include="../../../include/core/SkPreConfig.h" />
+    <None Include="../../../include/core/SkRasterizer.h" />
+    <None Include="../../../include/core/SkRect.h" />
+    <None Include="../../../include/core/SkRefCnt.h" />
+    <None Include="../../../include/core/SkRegion.h" />
+    <None Include="../../../include/core/SkRRect.h" />
+    <None Include="../../../include/core/SkScalar.h" />
+    <None Include="../../../include/core/SkShader.h" />
+    <None Include="../../../include/core/SkStream.h" />
+    <None Include="../../../include/core/SkString.h" />
+    <None Include="../../../include/core/SkStrokeRec.h" />
+    <None Include="../../../include/core/SkSurface.h" />
+    <None Include="../../../include/core/SkSwizzle.h" />
+    <None Include="../../../include/core/SkTextBlob.h" />
+    <None Include="../../../include/core/SkTime.h" />
+    <None Include="../../../include/core/SkTLazy.h" />
+    <None Include="../../../include/core/SkTypeface.h" />
+    <None Include="../../../include/core/SkTypes.h" />
+    <None Include="../../../include/core/SkUnPreMultiply.h" />
+    <None Include="../../../include/core/SkVertices.h" />
+    <None Include="../../../include/core/SkWriter32.h" />
+    <None Include="../../../include/private/SkAtomics.h" />
+    <None Include="../../../include/private/SkChecksum.h" />
+    <None Include="../../../include/private/SkFixed.h" />
+    <None Include="../../../include/private/SkFloatBits.h" />
+    <None Include="../../../include/private/SkFloatingPoint.h" />
+    <None Include="../../../include/private/SkMalloc.h" />
+    <None Include="../../../include/private/SkMessageBus.h" />
+    <None Include="../../../include/private/SkMutex.h" />
+    <None Include="../../../include/private/SkOnce.h" />
+    <None Include="../../../include/private/SkPathRef.h" />
+    <None Include="../../../include/private/SkSemaphore.h" />
+    <None Include="../../../include/private/SkShadowFlags.h" />
+    <None Include="../../../include/private/SkSpinlock.h" />
+    <None Include="../../../include/private/SkTemplates.h" />
+    <None Include="../../../include/private/SkTArray.h" />
+    <None Include="../../../include/private/SkTDArray.h" />
+    <None Include="../../../include/private/SkTFitsIn.h" />
+    <None Include="../../../include/private/SkTHash.h" />
+    <None Include="../../../include/private/SkThreadID.h" />
+    <None Include="../../../include/private/SkTSearch.h" />
+    <None Include="../../../include/private/SkTLogic.h" />
+    <None Include="../../../include/private/SkWeakRefCnt.h" />
+    <None Include="../../../include/pathops/SkPathOps.h" />
+    <CustomBuild Include="../../../src/pathops/SkAddIntersections.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkAddIntersections.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkAddIntersections.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkDConicLineIntersection.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkDConicLineIntersection.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkDConicLineIntersection.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkDCubicLineIntersection.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkDCubicLineIntersection.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkDCubicLineIntersection.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkDCubicToQuads.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkDCubicToQuads.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkDCubicToQuads.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkDLineIntersection.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkDLineIntersection.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkDLineIntersection.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkDQuadLineIntersection.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkDQuadLineIntersection.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkDQuadLineIntersection.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkIntersections.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkIntersections.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkIntersections.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpAngle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpAngle.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpAngle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpBuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpBuilder.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpBuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpCoincidence.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpCoincidence.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpCoincidence.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpContour.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpContour.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpContour.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpCubicHull.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpCubicHull.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpCubicHull.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpEdgeBuilder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpEdgeBuilder.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpEdgeBuilder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpSegment.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpSegment.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpSegment.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkOpSpan.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkOpSpan.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkOpSpan.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsCommon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsCommon.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsCommon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsConic.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsConic.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsConic.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsCubic.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsCubic.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsCubic.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsCurve.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsCurve.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsCurve.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsDebug.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsDebug.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsDebug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsLine.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsLine.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsLine.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsOp.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsOp.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsOp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsPoint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsPoint.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsPoint.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsQuad.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsQuad.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsQuad.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsRect.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsRect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsSimplify.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsSimplify.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsSimplify.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsTSect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsTSect.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsTSect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsTightBounds.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsTightBounds.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsTightBounds.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsTypes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsTypes.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsTypes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathOpsWinding.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathOpsWinding.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathOpsWinding.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkPathWriter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkPathWriter.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkPathWriter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/pathops/SkReduceOrder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/pathops/skia.SkReduceOrder.obj</Command>
+      <Outputs>$(OutDir)obj/src/pathops/skia.SkReduceOrder.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/pathops/SkAddIntersections.h" />
+    <None Include="../../../src/pathops/SkIntersectionHelper.h" />
+    <None Include="../../../src/pathops/SkIntersections.h" />
+    <None Include="../../../src/pathops/SkLineParameters.h" />
+    <None Include="../../../src/pathops/SkOpAngle.h" />
+    <None Include="../../../src/pathops/SkOpCoincidence.h" />
+    <None Include="../../../src/pathops/SkOpContour.h" />
+    <None Include="../../../src/pathops/SkOpEdgeBuilder.h" />
+    <None Include="../../../src/pathops/SkOpSegment.h" />
+    <None Include="../../../src/pathops/SkOpSpan.h" />
+    <None Include="../../../src/pathops/SkPathOpsBounds.h" />
+    <None Include="../../../src/pathops/SkPathOpsCommon.h" />
+    <None Include="../../../src/pathops/SkPathOpsConic.h" />
+    <None Include="../../../src/pathops/SkPathOpsCubic.h" />
+    <None Include="../../../src/pathops/SkPathOpsCurve.h" />
+    <None Include="../../../src/pathops/SkPathOpsDebug.h" />
+    <None Include="../../../src/pathops/SkPathOpsLine.h" />
+    <None Include="../../../src/pathops/SkPathOpsPoint.h" />
+    <None Include="../../../src/pathops/SkPathOpsQuad.h" />
+    <None Include="../../../src/pathops/SkPathOpsRect.h" />
+    <None Include="../../../src/pathops/SkPathOpsTSect.h" />
+    <None Include="../../../src/pathops/SkPathOpsTypes.h" />
+    <None Include="../../../src/pathops/SkPathWriter.h" />
+    <None Include="../../../src/pathops/SkReduceOrder.h" />
+    <CustomBuild Include="../../../src/jumper/SkJumper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/jumper/skia.SkJumper.obj</Command>
+      <Outputs>$(OutDir)obj/src/jumper/skia.SkJumper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/jumper/SkJumper_stages.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/jumper/skia.SkJumper_stages.obj</Command>
+      <Outputs>$(OutDir)obj/src/jumper/skia.SkJumper_stages.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/jumper/SkJumper_generated_win.S">
+      <Command>call ninja.exe -C $(OutDir) obj/src/jumper/skia.SkJumper_generated_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/jumper/skia.SkJumper_generated_win.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../include/utils/SkFrontBufferedStream.h" />
+    <None Include="../../../include/utils/SkCamera.h" />
+    <None Include="../../../include/utils/SkCanvasStateUtils.h" />
+    <None Include="../../../include/utils/SkDumpCanvas.h" />
+    <None Include="../../../include/utils/SkEventTracer.h" />
+    <None Include="../../../include/utils/SkInterpolator.h" />
+    <None Include="../../../include/utils/SkNoDrawCanvas.h" />
+    <None Include="../../../include/utils/SkNWayCanvas.h" />
+    <None Include="../../../include/utils/SkNullCanvas.h" />
+    <None Include="../../../include/utils/SkPaintFilterCanvas.h" />
+    <None Include="../../../include/utils/SkParse.h" />
+    <None Include="../../../include/utils/SkParsePath.h" />
+    <None Include="../../../include/utils/SkRandom.h" />
+    <None Include="../../../include/utils/SkShadowUtils.h" />
+    <None Include="../../../include/utils/SkTextBox.h" />
+    <CustomBuild Include="../../../src/utils/SkBase64.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkBase64.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkBase64.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkBase64.h" />
+    <CustomBuild Include="../../../src/utils/SkBitmapSourceDeserializer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkBitmapSourceDeserializer.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkBitmapSourceDeserializer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkBitmapSourceDeserializer.h" />
+    <None Include="../../../src/utils/SkBitSet.h" />
+    <CustomBuild Include="../../../src/utils/SkFrontBufferedStream.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkFrontBufferedStream.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkFrontBufferedStream.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkCamera.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkCamera.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkCamera.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkCanvasStack.h" />
+    <CustomBuild Include="../../../src/utils/SkCanvasStack.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkCanvasStack.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkCanvasStack.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkCanvasStateUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkCanvasStateUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkCanvasStateUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkCurveMeasure.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkCurveMeasure.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkCurveMeasure.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkCurveMeasure.h" />
+    <CustomBuild Include="../../../src/utils/SkDashPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkDashPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkDashPath.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkDashPathPriv.h" />
+    <CustomBuild Include="../../../src/utils/SkDeferredCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkDeferredCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkDeferredCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkDumpCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkDumpCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkDumpCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkEventTracer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkEventTracer.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkEventTracer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkFloatUtils.h" />
+    <CustomBuild Include="../../../src/utils/SkInsetConvexPolygon.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkInsetConvexPolygon.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkInsetConvexPolygon.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkInsetConvexPolygon.h" />
+    <CustomBuild Include="../../../src/utils/SkInterpolator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkInterpolator.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkInterpolator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkJSONWriter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkJSONWriter.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkJSONWriter.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkJSONWriter.h" />
+    <CustomBuild Include="../../../src/utils/SkMatrix22.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkMatrix22.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkMatrix22.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkMatrix22.h" />
+    <CustomBuild Include="../../../src/utils/SkMultiPictureDocument.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkMultiPictureDocument.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkMultiPictureDocument.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkNWayCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkNWayCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkNWayCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkNullCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkNullCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkNullCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkOSPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkOSPath.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkOSPath.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkOSPath.h" />
+    <CustomBuild Include="../../../src/utils/SkPaintFilterCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkPaintFilterCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkPaintFilterCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkParse.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkParse.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkParse.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkParseColor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkParseColor.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkParseColor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkParsePath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkParsePath.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkParsePath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkPatchUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkPatchUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkPatchUtils.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkPatchUtils.h" />
+    <CustomBuild Include="../../../src/utils/SkShadowTessellator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkShadowTessellator.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkShadowTessellator.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkShadowTessellator.h" />
+    <CustomBuild Include="../../../src/utils/SkShadowUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkShadowUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkShadowUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/SkTextBox.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkTextBox.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkTextBox.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkThreadUtils.h" />
+    <None Include="../../../src/utils/SkThreadUtils_pthread.h" />
+    <CustomBuild Include="../../../src/utils/SkThreadUtils_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkThreadUtils_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkThreadUtils_win.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/SkThreadUtils_win.h" />
+    <CustomBuild Include="../../../src/utils/SkWhitelistTypefaces.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/skia.SkWhitelistTypefaces.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/skia.SkWhitelistTypefaces.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../include/utils/mac/SkCGUtils.h" />
+    <CustomBuild Include="../../../src/utils/mac/SkCreateCGImageRef.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/mac/skia.SkCreateCGImageRef.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/mac/skia.SkCreateCGImageRef.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkAutoCoInitialize.h" />
+    <CustomBuild Include="../../../src/utils/win/SkAutoCoInitialize.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkAutoCoInitialize.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkAutoCoInitialize.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkDWrite.h" />
+    <CustomBuild Include="../../../src/utils/win/SkDWrite.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkDWrite.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkDWrite.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/win/SkDWriteFontFileStream.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkDWriteFontFileStream.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkDWriteFontFileStream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkDWriteFontFileStream.h" />
+    <CustomBuild Include="../../../src/utils/win/SkDWriteGeometrySink.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkDWriteGeometrySink.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkDWriteGeometrySink.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkDWriteGeometrySink.h" />
+    <None Include="../../../src/utils/win/SkHRESULT.h" />
+    <CustomBuild Include="../../../src/utils/win/SkHRESULT.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkHRESULT.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkHRESULT.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkIStream.h" />
+    <CustomBuild Include="../../../src/utils/win/SkIStream.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkIStream.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkIStream.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/utils/win/SkTScopedComPtr.h" />
+    <None Include="../../../src/utils/win/SkWGL.h" />
+    <CustomBuild Include="../../../src/utils/win/SkWGL_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/win/skia.SkWGL_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/win/skia.SkWGL_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/fonts/SkRandomScalerContext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/fonts/skia.SkRandomScalerContext.obj</Command>
+      <Outputs>$(OutDir)obj/src/fonts/skia.SkRandomScalerContext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/fonts/SkRandomScalerContext.h" />
+    <CustomBuild Include="../../../src/fonts/SkTestScalerContext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/fonts/skia.SkTestScalerContext.obj</Command>
+      <Outputs>$(OutDir)obj/src/fonts/skia.SkTestScalerContext.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/fonts/SkTestScalerContext.h" />
+    <CustomBuild Include="../../../src/xps/SkXPSDocument.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/xps/skia.SkXPSDocument.obj</Command>
+      <Outputs>$(OutDir)obj/src/xps/skia.SkXPSDocument.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/xps/SkXPSDocument.h" />
+    <CustomBuild Include="../../../src/xps/SkXPSDevice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/xps/skia.SkXPSDevice.obj</Command>
+      <Outputs>$(OutDir)obj/src/xps/skia.SkXPSDevice.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/xps/SkXPSDevice.h" />
+    <CustomBuild Include="../../../src/android/SkAndroidFrameworkUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/android/skia.SkAndroidFrameworkUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/android/skia.SkAndroidFrameworkUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/android/SkBitmapRegionCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/android/skia.SkBitmapRegionCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/android/skia.SkBitmapRegionCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/android/SkBitmapRegionDecoder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/android/skia.SkBitmapRegionDecoder.obj</Command>
+      <Outputs>$(OutDir)obj/src/android/skia.SkBitmapRegionDecoder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkAndroidCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkAndroidCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkAndroidCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkBmpBaseCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkBmpBaseCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkBmpBaseCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkBmpCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkBmpCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkBmpCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkBmpMaskCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkBmpMaskCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkBmpMaskCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkBmpRLECodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkBmpRLECodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkBmpRLECodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkBmpStandardCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkBmpStandardCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkBmpStandardCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkCodecImageGenerator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkCodecImageGenerator.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkCodecImageGenerator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkGifCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkGifCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkGifCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkMaskSwizzler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkMaskSwizzler.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkMaskSwizzler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkMasks.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkMasks.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkMasks.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkSampledCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkSampledCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkSampledCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkSampler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkSampler.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkSampler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkStreamBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkStreamBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkStreamBuffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkSwizzler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkSwizzler.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkSwizzler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/codec/SkWbmpCodec.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/codec/skia.SkWbmpCodec.obj</Command>
+      <Outputs>$(OutDir)obj/src/codec/skia.SkWbmpCodec.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/images/SkImageEncoder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/images/skia.SkImageEncoder.obj</Command>
+      <Outputs>$(OutDir)obj/src/images/skia.SkImageEncoder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkDiscardableMemory_none.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkDiscardableMemory_none.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkDiscardableMemory_none.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkImageGenerator_skia.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkImageGenerator_skia.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkImageGenerator_skia.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkMemory_malloc.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkMemory_malloc.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkMemory_malloc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkOSFile_stdio.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkOSFile_stdio.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkOSFile_stdio.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/sfnt/SkOTTable_name.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/sfnt/skia.SkOTTable_name.obj</Command>
+      <Outputs>$(OutDir)obj/src/sfnt/skia.SkOTTable_name.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/sfnt/SkOTUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/sfnt/skia.SkOTUtils.obj</Command>
+      <Outputs>$(OutDir)obj/src/sfnt/skia.SkOTUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/utils/mac/SkStream_mac.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/utils/mac/skia.SkStream_mac.obj</Command>
+      <Outputs>$(OutDir)obj/src/utils/mac/skia.SkStream_mac.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../third_party/gif/SkGifImageReader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/gif/skia.SkGifImageReader.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/gif/skia.SkGifImageReader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/fonts/SkFontMgr_indirect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/fonts/skia.SkFontMgr_indirect.obj</Command>
+      <Outputs>$(OutDir)obj/src/fonts/skia.SkFontMgr_indirect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkDebug_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkDebug_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkDebug_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkFontHost_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkFontHost_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkFontHost_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkFontMgr_win_dw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkFontMgr_win_dw.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkFontMgr_win_dw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkImageEncoder_WIC.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkImageEncoder_WIC.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkImageEncoder_WIC.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkImageGeneratorWIC.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkImageGeneratorWIC.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkImageGeneratorWIC.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkOSFile_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkOSFile_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkOSFile_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkOSLibrary_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkOSLibrary_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkOSLibrary_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkScalerContext_win_dw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkScalerContext_win_dw.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkScalerContext_win_dw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkTLS_win.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkTLS_win.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkTLS_win.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkTypeface_win_dw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkTypeface_win_dw.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkTypeface_win_dw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/ports/SkFontMgr_win_dw_factory.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/ports/skia.SkFontMgr_win_dw_factory.obj</Command>
+      <Outputs>$(OutDir)obj/src/ports/skia.SkFontMgr_win_dw_factory.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) ./skia.lib" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean ./skia.lib" />
+  </Target>
+</Project>

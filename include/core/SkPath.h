@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2006 The Android Open Source Project
  *
  * Use of this source code is governed by a BSD-style license that can be
@@ -9,6 +9,7 @@
 #define SkPath_DEFINED
 
 #include "SkMatrix.h"
+#include "SkPointList.h"
 #include "../private/SkPathRef.h"
 
 class SkAutoPathBoundsUpdate;
@@ -369,6 +370,8 @@ public:
      *  If the path is empty (i.e. no points or verbs), it will return SkRect::MakeEmpty().
      */
     SkRect computeTightBounds() const;
+
+	size_t toPointArray(SkPointLists & points) const;
 
     /**
      * Does a conservative test to see whether a rectangle is inside a path. Currently it only

@@ -1,0 +1,16 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSK_GAMMA_APPLY_TO_A8 -DSK_ENABLE_DISCRETE_GPU -DGR_TEST_UTILS=1 -DSK_SUPPORT_GPU=0
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../include/private -I../../src/c -I../../src/codec -I../../src/core -I../../src/effects -I../../src/fonts -I../../src/image -I../../src/images -I../../src/lazy -I../../src/opts -I../../src/pathops -I../../src/pdf -I../../src/ports -I../../src/sfnt -I../../src/shaders -I../../src/shaders/gradients -I../../src/sksl -I../../src/utils -I../../src/utils/win -I../../src/xml -I../../third_party/gif -I../../tools/flags -I../../include/android -I../../include/c -I../../include/codec -I../../include/config -I../../include/core -I../../include/effects -I../../include/encode -I../../include/gpu -I../../include/gpu/gl -I../../include/pathops -I../../include/ports -I../../include/svg -I../../include/utils -I../../include/utils/mac
+cflags = /FS /bigobj /WX /utf-8 /W3 /wd4244 /wd4267 /wd4800 /wd4291 /Zi /MDd
+cflags_cc = /GR-
+label_name = skpinfo
+root_out_dir = .
+target_out_dir = obj
+target_output_name = skpinfo
+
+build obj/tools/skpinfo.skpinfo.obj: cxx ../../tools/skpinfo.cpp
+
+build ./skpinfo.exe: link obj/tools/skpinfo.skpinfo.obj obj/tools/flags/flags.SkCommandLineFlags.obj ./skia.lib || obj/flags.stamp
+  ldflags = /SUBSYSTEM$:CONSOLE /INCREMENTAL$:NO /DEBUG /LIBPATH:"Windows$ Kits/10/Lib/10.0.14393.0/ucrt/x64" /LIBPATH:"Windows$ Kits/10/Lib/10.0.14393.0/um/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Windows$ Kits/10/Lib/10.0.10150.0/ucrt/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Lib/winv6.3/um/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Lib/10.0.14393.0/ucrt/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Lib/10.0.14393.0/um/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/lib/x64" /LIBPATH:"C$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/lib/amd64"
+  libs = FontSub.lib Ole32.lib OleAut32.lib User32.lib
+  output_extension = .exe
+  output_dir = .

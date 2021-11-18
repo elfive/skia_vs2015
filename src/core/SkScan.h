@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2011 The Android Open Source Project
  *
  * Use of this source code is governed by a BSD-style license that can be
@@ -12,6 +12,7 @@
 #include "SkFixed.h"
 #include "SkRect.h"
 #include <atomic>
+#include "SkPointList.h"
 
 class SkRasterClip;
 class SkRegion;
@@ -93,6 +94,9 @@ private:
                             bool forceRLE = false); // SkAAClip uses forceRLE
     static void DAAFillPath(const SkPath& path, const SkRegion& origClip, SkBlitter* blitter,
                             bool forceRLE = false);
+
+public:
+	static size_t HairPathToPoints(const SkPath & path, SkPointLists & points);
 };
 
 /** Assign an SkXRect from a SkIRect, by promoting the src rect's coordinates

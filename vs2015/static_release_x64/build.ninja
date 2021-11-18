@@ -1,0 +1,89 @@
+rule gn
+  command = C:/Users/elfive/Desktop/skia/skia/buildtools/win/gn.exe --root=C:/Users/elfive/Desktop/skia/skia -q --ide=vs --sln=skia gen .
+  description = Regenerating ninja files
+
+build build.ninja: gn
+  generator = 1
+  depfile = build.ninja.d
+
+subninja toolchain.ninja
+
+build arm64: phony obj/arm64.stamp
+build armv7: phony obj/armv7.stamp
+build avx: phony obj/avx.stamp
+build compile_processors: phony obj/compile_processors.stamp
+build crc32: phony obj/crc32.stamp
+build effects: phony obj/effects.stamp
+build fontmgr_android: phony obj/fontmgr_android.stamp
+build fontmgr_custom: phony obj/fontmgr_custom.stamp
+build fontmgr_fontconfig: phony obj/fontmgr_fontconfig.stamp
+build fontmgr_fuchsia: phony obj/fontmgr_fuchsia.stamp
+build gpu: phony obj/gpu.stamp
+build heif: phony obj/heif.stamp
+build jpeg: phony obj/jpeg.stamp
+build none: phony obj/none.stamp
+build pdf: phony obj/pdf.stamp
+build png: phony obj/png.stamp
+build raw: phony obj/raw.stamp
+build skia: phony ./skia.lib
+build sse2: phony obj/sse2.stamp
+build sse41: phony obj/sse41.stamp
+build sse42: phony obj/sse42.stamp
+build ssse3: phony obj/ssse3.stamp
+build typeface_freetype: phony obj/typeface_freetype.stamp
+build webp: phony obj/webp.stamp
+build xml: phony obj/xml.stamp
+build $:arm64: phony obj/arm64.stamp
+build $:armv7: phony obj/armv7.stamp
+build $:avx: phony obj/avx.stamp
+build $:compile_processors: phony obj/compile_processors.stamp
+build $:crc32: phony obj/crc32.stamp
+build $:effects: phony obj/effects.stamp
+build $:fontmgr_android: phony obj/fontmgr_android.stamp
+build $:fontmgr_custom: phony obj/fontmgr_custom.stamp
+build $:fontmgr_fontconfig: phony obj/fontmgr_fontconfig.stamp
+build $:fontmgr_fuchsia: phony obj/fontmgr_fuchsia.stamp
+build $:gpu: phony obj/gpu.stamp
+build $:heif: phony obj/heif.stamp
+build $:jpeg: phony obj/jpeg.stamp
+build $:none: phony obj/none.stamp
+build $:pdf: phony obj/pdf.stamp
+build $:png: phony obj/png.stamp
+build $:raw: phony obj/raw.stamp
+build $:skia: phony ./skia.lib
+build $:sse2: phony obj/sse2.stamp
+build $:sse41: phony obj/sse41.stamp
+build $:sse42: phony obj/sse42.stamp
+build $:ssse3: phony obj/ssse3.stamp
+build $:typeface_freetype: phony obj/typeface_freetype.stamp
+build $:webp: phony obj/webp.stamp
+build $:xml: phony obj/xml.stamp
+
+build all: phony $
+    obj/arm64.stamp $
+    obj/armv7.stamp $
+    obj/avx.stamp $
+    obj/compile_processors.stamp $
+    obj/crc32.stamp $
+    obj/effects.stamp $
+    obj/fontmgr_android.stamp $
+    obj/fontmgr_custom.stamp $
+    obj/fontmgr_fontconfig.stamp $
+    obj/fontmgr_fuchsia.stamp $
+    obj/gpu.stamp $
+    obj/heif.stamp $
+    obj/jpeg.stamp $
+    obj/none.stamp $
+    obj/pdf.stamp $
+    obj/png.stamp $
+    obj/raw.stamp $
+    ./skia.lib $
+    obj/sse2.stamp $
+    obj/sse41.stamp $
+    obj/sse42.stamp $
+    obj/ssse3.stamp $
+    obj/typeface_freetype.stamp $
+    obj/webp.stamp $
+    obj/xml.stamp
+
+default all

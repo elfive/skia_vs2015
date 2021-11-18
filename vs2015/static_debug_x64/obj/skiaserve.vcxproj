@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB4BB857-03CA-D02A-C8FF-5E79B056EA01}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>skiaserve</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../tools/flags;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;../../../third_party/externals/microhttpd/src/include;../../../third_party/libpng;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>CONSOLE</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tools/skiaserve/Request.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/skiaserve.Request.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/skiaserve.Request.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/Response.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/skiaserve.Response.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/skiaserve.Response.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/skiaserve.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/skiaserve.skiaserve.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/skiaserve.skiaserve.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/BreakHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.BreakHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.BreakHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/ClipAlphaHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.ClipAlphaHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.ClipAlphaHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/CmdHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.CmdHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.CmdHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/ColorModeHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.ColorModeHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.ColorModeHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/DataHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.DataHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.DataHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/DownloadHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.DownloadHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.DownloadHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/EnableGPUHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.EnableGPUHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.EnableGPUHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/ImgHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.ImgHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.ImgHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/InfoHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.InfoHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.InfoHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/OpBoundsHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.OpBoundsHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.OpBoundsHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/OpsHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.OpsHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.OpsHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/OverdrawHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.OverdrawHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.OverdrawHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/PostHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.PostHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.PostHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/QuitHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.QuitHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.QuitHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/skiaserve/urlhandlers/RootHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/skiaserve/urlhandlers/skiaserve.RootHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/skiaserve/urlhandlers/skiaserve.RootHandler.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) ./skiaserve.exe" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean ./skiaserve.exe" />
+  </Target>
+</Project>

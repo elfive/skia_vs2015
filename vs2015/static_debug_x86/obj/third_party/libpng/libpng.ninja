@@ -1,0 +1,28 @@
+defines = -DPNG_INTEL_SSE -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../third_party/libpng -I../../third_party/externals/zlib
+cflags = /w /FS /bigobj /WX /utf-8 /Zi /MDd
+cflags_c =
+label_name = libpng
+root_out_dir = .
+target_out_dir = obj/third_party/libpng
+target_output_name = libpng
+
+build obj/third_party/libpng/libpng.png.obj: cc ../../third_party/libpng/png.c
+build obj/third_party/libpng/libpng.pngerror.obj: cc ../../third_party/libpng/pngerror.c
+build obj/third_party/libpng/libpng.pngget.obj: cc ../../third_party/libpng/pngget.c
+build obj/third_party/libpng/libpng.pngmem.obj: cc ../../third_party/libpng/pngmem.c
+build obj/third_party/libpng/libpng.pngpread.obj: cc ../../third_party/libpng/pngpread.c
+build obj/third_party/libpng/libpng.pngread.obj: cc ../../third_party/libpng/pngread.c
+build obj/third_party/libpng/libpng.pngrio.obj: cc ../../third_party/libpng/pngrio.c
+build obj/third_party/libpng/libpng.pngrtran.obj: cc ../../third_party/libpng/pngrtran.c
+build obj/third_party/libpng/libpng.pngrutil.obj: cc ../../third_party/libpng/pngrutil.c
+build obj/third_party/libpng/libpng.pngset.obj: cc ../../third_party/libpng/pngset.c
+build obj/third_party/libpng/libpng.pngtrans.obj: cc ../../third_party/libpng/pngtrans.c
+build obj/third_party/libpng/libpng.pngwio.obj: cc ../../third_party/libpng/pngwio.c
+build obj/third_party/libpng/libpng.pngwrite.obj: cc ../../third_party/libpng/pngwrite.c
+build obj/third_party/libpng/libpng.pngwtran.obj: cc ../../third_party/libpng/pngwtran.c
+build obj/third_party/libpng/libpng.pngwutil.obj: cc ../../third_party/libpng/pngwutil.c
+build obj/third_party/libpng/contrib/intel/libpng.filter_sse2_intrinsics.obj: cc ../../third_party/libpng/contrib/intel/filter_sse2_intrinsics.c
+build obj/third_party/libpng/contrib/intel/libpng.intel_init.obj: cc ../../third_party/libpng/contrib/intel/intel_init.c
+
+build obj/third_party/libpng/libpng.stamp: stamp obj/third_party/libpng/libpng.png.obj obj/third_party/libpng/libpng.pngerror.obj obj/third_party/libpng/libpng.pngget.obj obj/third_party/libpng/libpng.pngmem.obj obj/third_party/libpng/libpng.pngpread.obj obj/third_party/libpng/libpng.pngread.obj obj/third_party/libpng/libpng.pngrio.obj obj/third_party/libpng/libpng.pngrtran.obj obj/third_party/libpng/libpng.pngrutil.obj obj/third_party/libpng/libpng.pngset.obj obj/third_party/libpng/libpng.pngtrans.obj obj/third_party/libpng/libpng.pngwio.obj obj/third_party/libpng/libpng.pngwrite.obj obj/third_party/libpng/libpng.pngwtran.obj obj/third_party/libpng/libpng.pngwutil.obj obj/third_party/libpng/contrib/intel/libpng.filter_sse2_intrinsics.obj obj/third_party/libpng/contrib/intel/libpng.intel_init.obj || obj/third_party/zlib/zlib.stamp obj/third_party/zlib/zlib_x86.stamp

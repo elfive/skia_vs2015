@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86B0BB28-5C31-4B48-ABFA-F542BB7852FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libmicrohttpd</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../third_party/libmicrohttpd;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../../../third_party/externals/microhttpd/src/include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/w /FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>DAUTH_SUPPORT=1;HAVE_SYS_TYPES_H=1;HAVE_TIME_H=1;MHD_USE_W32_THREADS=1;WINDOWS;_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/base64.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.base64.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.base64.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/connection.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.connection.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.connection.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/daemon.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.daemon.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.daemon.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/internal.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.internal.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.internal.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/memorypool.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.memorypool.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.memorypool.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/postprocessor.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.postprocessor.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.postprocessor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/reason_phrase.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.reason_phrase.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.reason_phrase.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/response.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.response.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.response.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/microhttpd/tsearch.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.tsearch.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/microhttpd/libmicrohttpd.tsearch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../third_party/externals/microhttpd/src/platform/w32functions.c">
+      <Command>call ninja.exe -C $(OutDir) obj/third_party/externals/microhttpd/src/platform/libmicrohttpd.w32functions.obj</Command>
+      <Outputs>$(OutDir)obj/third_party/externals/microhttpd/src/platform/libmicrohttpd.w32functions.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/third_party/libmicrohttpd/libmicrohttpd.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/third_party/libmicrohttpd/libmicrohttpd.stamp" />
+  </Target>
+</Project>

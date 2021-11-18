@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D38AF43F-6911-11FB-2BD5-2DAAE1B95588}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>samples</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../experimental;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../samplecode;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../experimental/svg/model;../../../tools/flags;../../../gm;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;../../../include/views;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../samplecode/ClockFaceView.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.ClockFaceView.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.ClockFaceView.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/GMSampleView.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.GMSampleView.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.GMSampleView.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/OverView.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.OverView.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.OverView.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/PerlinPatch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.PerlinPatch.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.PerlinPatch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/Sample2PtRadial.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.Sample2PtRadial.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.Sample2PtRadial.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAAClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAAClip.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAAClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAAGeometry.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAAGeometry.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAAGeometry.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAARectModes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAARectModes.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAARectModes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAARects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAARects.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAARects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAll.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAll.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAll.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAndroidShadows.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAndroidShadows.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAndroidShadows.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAnimatedText.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAnimatedText.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAnimatedText.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAnimBlur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAnimBlur.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAnimBlur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleArc.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleArc.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleArc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAtlas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleAtlas.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleAtlas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBigBlur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleBigBlur.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleBigBlur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBigGradient.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleBigGradient.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleBigGradient.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBitmapRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleBitmapRect.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleBitmapRect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBlur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleBlur.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleBlur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCCPRGeometry.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleCCPRGeometry.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleCCPRGeometry.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCamera.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleCamera.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleCamera.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleChart.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleChart.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleChart.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleChineseFling.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleChineseFling.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleChineseFling.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCircle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleCircle.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleCircle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleClip.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClipDrawMatch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleClipDrawMatch.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleClipDrawMatch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClock.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleClock.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleClock.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleCode.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleCode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleColorFilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleColorFilter.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleColorFilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleComplexClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleComplexClip.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleComplexClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleConcavePaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleConcavePaths.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleConcavePaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleDegenerateTwoPtRadials.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleDegenerateTwoPtRadials.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleDegenerateTwoPtRadials.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleDither.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleDither.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleDither.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleEffects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleEffects.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleEffects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleEmboss.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleEmboss.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleEmboss.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFatBits.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFatBits.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFatBits.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFillType.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFillType.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFillType.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilter2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFilter2.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFilter2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilterFuzz.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFilterFuzz.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFilterFuzz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilterQuality.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFilterQuality.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFilterQuality.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFontScalerTest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFontScalerTest.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFontScalerTest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFuzz.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleFuzz.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleFuzz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleGradients.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleGradients.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleGradients.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairCurves.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleHairCurves.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleHairCurves.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairline.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleHairline.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleHairline.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairModes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleHairModes.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleHairModes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHT.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleHT.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleHT.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleIdentityScale.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleIdentityScale.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleIdentityScale.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLayerMask.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleLayerMask.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleLayerMask.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLayers.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleLayers.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleLayers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLCD.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleLCD.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleLCD.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLines.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleLines.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleLines.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleManyRects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleManyRects.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleManyRects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleMeasure.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleMeasure.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleMeasure.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleMegaStroke.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleMegaStroke.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleMegaStroke.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePatch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePatch.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePatch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePath.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathText.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathText.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathText.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathClip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathClip.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathClip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathEffects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathEffects.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathEffects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathFinder.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathFinder.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathFinder.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathFuzz.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathFuzz.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathFuzz.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathOverstroke.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePathOverstroke.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePathOverstroke.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePdfFileViewer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePdfFileViewer.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePdfFileViewer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePoints.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePoints.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePoints.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePolyToPoly.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SamplePolyToPoly.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SamplePolyToPoly.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleQuadStroker.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleQuadStroker.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleQuadStroker.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRectanizer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleRectanizer.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleRectanizer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRegion.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleRegion.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleRegion.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRepeatTile.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleRepeatTile.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleRepeatTile.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShaders.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShaders.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShaders.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShaderText.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShaderText.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShaderText.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowColor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShadowColor.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShadowColor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowReference.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShadowReference.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShadowReference.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowUtils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShadowUtils.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShadowUtils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleShip.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleShip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSlides.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleSlides.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleSlides.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStringArt.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleStringArt.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleStringArt.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStrokePath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleStrokePath.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleStrokePath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStrokeRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleStrokeRect.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleStrokeRect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSubpixelTranslate.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleSubpixelTranslate.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleSubpixelTranslate.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSVGFile.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleSVGFile.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleSVGFile.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSVGPong.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleSVGPong.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleSVGPong.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleText.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleText.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleText.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextAlpha.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleTextAlpha.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleTextAlpha.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextBox.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleTextBox.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleTextBox.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextOnPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleTextOnPath.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleTextOnPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextureDomain.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleTextureDomain.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleTextureDomain.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTiling.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleTiling.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleTiling.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleUnpremul.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleUnpremul.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleUnpremul.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleVertices.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleVertices.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleVertices.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleWritePixels.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleWritePixels.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleWritePixels.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleXfer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleXfer.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleXfer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleXfermodesBlur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.SampleXfermodesBlur.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.SampleXfermodesBlur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/vertexdump.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/samplecode/samples.vertexdump.obj</Command>
+      <Outputs>$(OutDir)obj/samplecode/samples.vertexdump.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/samples.SkSetPoly3To3.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/samples.SkSetPoly3To3.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3_A.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/samples.SkSetPoly3To3_A.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/samples.SkSetPoly3To3_A.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3_D.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/samples.SkSetPoly3To3_D.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/samples.SkSetPoly3To3_D.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkThreadedBMPDevice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/src/core/samples.SkThreadedBMPDevice.obj</Command>
+      <Outputs>$(OutDir)obj/src/core/samples.SkThreadedBMPDevice.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../src/core/SkThreadedBMPDevice.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/samples.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/samples.stamp" />
+  </Target>
+</Project>

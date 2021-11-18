@@ -1,0 +1,30 @@
+defines = -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSK_GAMMA_APPLY_TO_A8 -DSK_ENABLE_DISCRETE_GPU -DGR_TEST_UTILS=1 -DSK_SUPPORT_GPU=0
+include_dirs = "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/Tools/MSVC/14.10.25017/include" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/VC/include" "-IWindows$ Kits/10/Include/10.0.14393.0/shared" "-IWindows$ Kits/10/Include/10.0.14393.0/ucrt" "-IWindows$ Kits/10/Include/10.0.14393.0/um" "-IWindows$ Kits/10/Include/10.0.14393.0/winrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/shared" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/10/Include/10.0.10150.0/ucrt" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/um" "-IC$:/Program$ Files$ (x86)/Windows$ Kits/8.1/Include/winrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/shared" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/ucrt" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/um" "-IC$:/Program$ Files$ (x86)/Microsoft$ Visual$ Studio$ 14.0/win_sdk/Include/10.0.14393.0/winrt" -I../../experimental/svg/model -I../../include/private -I../../src/c -I../../src/codec -I../../src/core -I../../src/effects -I../../src/fonts -I../../src/image -I../../src/images -I../../src/lazy -I../../src/opts -I../../src/pathops -I../../src/pdf -I../../src/ports -I../../src/sfnt -I../../src/shaders -I../../src/shaders/gradients -I../../src/sksl -I../../src/utils -I../../src/utils/win -I../../src/xml -I../../third_party/gif -I../../include/android -I../../include/c -I../../include/codec -I../../include/config -I../../include/core -I../../include/effects -I../../include/encode -I../../include/gpu -I../../include/gpu/gl -I../../include/pathops -I../../include/ports -I../../include/svg -I../../include/utils -I../../include/utils/mac
+cflags = /FS /bigobj /WX /utf-8 /W3 /wd4244 /wd4267 /wd4800 /wd4291 /Zi /MDd
+cflags_cc = /GR-
+label_name = experimental_svg_model
+root_out_dir = .
+target_out_dir = obj
+target_output_name = experimental_svg_model
+
+build obj/experimental/svg/model/experimental_svg_model.SkSVGAttribute.obj: cxx ../../experimental/svg/model/SkSVGAttribute.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGAttributeParser.obj: cxx ../../experimental/svg/model/SkSVGAttributeParser.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGCircle.obj: cxx ../../experimental/svg/model/SkSVGCircle.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGClipPath.obj: cxx ../../experimental/svg/model/SkSVGClipPath.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGContainer.obj: cxx ../../experimental/svg/model/SkSVGContainer.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGDOM.obj: cxx ../../experimental/svg/model/SkSVGDOM.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGEllipse.obj: cxx ../../experimental/svg/model/SkSVGEllipse.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGLine.obj: cxx ../../experimental/svg/model/SkSVGLine.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGLinearGradient.obj: cxx ../../experimental/svg/model/SkSVGLinearGradient.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGNode.obj: cxx ../../experimental/svg/model/SkSVGNode.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGPath.obj: cxx ../../experimental/svg/model/SkSVGPath.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGPoly.obj: cxx ../../experimental/svg/model/SkSVGPoly.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGRect.obj: cxx ../../experimental/svg/model/SkSVGRect.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGRenderContext.obj: cxx ../../experimental/svg/model/SkSVGRenderContext.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGSVG.obj: cxx ../../experimental/svg/model/SkSVGSVG.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGShape.obj: cxx ../../experimental/svg/model/SkSVGShape.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGStop.obj: cxx ../../experimental/svg/model/SkSVGStop.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGTransformableNode.obj: cxx ../../experimental/svg/model/SkSVGTransformableNode.cpp
+build obj/experimental/svg/model/experimental_svg_model.SkSVGValue.obj: cxx ../../experimental/svg/model/SkSVGValue.cpp
+
+build obj/experimental_svg_model.stamp: stamp obj/experimental/svg/model/experimental_svg_model.SkSVGAttribute.obj obj/experimental/svg/model/experimental_svg_model.SkSVGAttributeParser.obj obj/experimental/svg/model/experimental_svg_model.SkSVGCircle.obj obj/experimental/svg/model/experimental_svg_model.SkSVGClipPath.obj obj/experimental/svg/model/experimental_svg_model.SkSVGContainer.obj obj/experimental/svg/model/experimental_svg_model.SkSVGDOM.obj obj/experimental/svg/model/experimental_svg_model.SkSVGEllipse.obj obj/experimental/svg/model/experimental_svg_model.SkSVGLine.obj obj/experimental/svg/model/experimental_svg_model.SkSVGLinearGradient.obj obj/experimental/svg/model/experimental_svg_model.SkSVGNode.obj obj/experimental/svg/model/experimental_svg_model.SkSVGPath.obj obj/experimental/svg/model/experimental_svg_model.SkSVGPoly.obj obj/experimental/svg/model/experimental_svg_model.SkSVGRect.obj obj/experimental/svg/model/experimental_svg_model.SkSVGRenderContext.obj obj/experimental/svg/model/experimental_svg_model.SkSVGSVG.obj obj/experimental/svg/model/experimental_svg_model.SkSVGShape.obj obj/experimental/svg/model/experimental_svg_model.SkSVGStop.obj obj/experimental/svg/model/experimental_svg_model.SkSVGTransformableNode.obj obj/experimental/svg/model/experimental_svg_model.SkSVGValue.obj || ./skia.lib

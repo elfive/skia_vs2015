@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2006 The Android Open Source Project
  *
  * Use of this source code is governed by a BSD-style license that can be
@@ -14,6 +14,7 @@
 #include "SkPathPriv.h"
 #include "SkPathRef.h"
 #include "SkRRect.h"
+#include "SkScan.h"
 
 static float poly_eval(float A, float B, float C, float t) {
     return (A * t + B) * t + C;
@@ -3511,4 +3512,9 @@ DONE:
     min.store((SkPoint*)&bounds.fLeft);
     max.store((SkPoint*)&bounds.fRight);
     return bounds;
+}
+
+size_t SkPath::toPointArray(SkPointLists & points) const
+{
+	return SkScan::HairPathToPoints(*this, points);
 }

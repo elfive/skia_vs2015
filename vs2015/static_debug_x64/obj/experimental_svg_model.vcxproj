@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D96A28B-9949-92E1-1C22-A6B347A6AB79}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>experimental_svg_model</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../experimental/svg/model;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGAttribute.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGAttribute.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGAttribute.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGAttributeParser.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGAttributeParser.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGAttributeParser.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGCircle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGCircle.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGCircle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGClipPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGClipPath.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGClipPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGContainer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGContainer.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGContainer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGDOM.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGDOM.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGDOM.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGEllipse.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGEllipse.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGEllipse.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGLine.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGLine.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGLine.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGLinearGradient.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGLinearGradient.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGLinearGradient.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGNode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGNode.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGNode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGPath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGPath.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGPath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGPoly.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGPoly.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGPoly.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGRect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGRect.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGRect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGRenderContext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGRenderContext.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGRenderContext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGSVG.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGSVG.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGSVG.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGShape.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGShape.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGShape.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGStop.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGStop.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGStop.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGTransformableNode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGTransformableNode.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGTransformableNode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/svg/model/SkSVGValue.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/experimental/svg/model/experimental_svg_model.SkSVGValue.obj</Command>
+      <Outputs>$(OutDir)obj/experimental/svg/model/experimental_svg_model.SkSVGValue.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/experimental_svg_model.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/experimental_svg_model.stamp" />
+  </Target>
+</Project>

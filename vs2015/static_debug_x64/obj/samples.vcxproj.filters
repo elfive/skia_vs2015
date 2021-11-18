@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="samplecode">
+      <UniqueIdentifier>{6B469B88-A877-D789-8767-2C49FD2F8CBE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="experimental">
+      <UniqueIdentifier>{F245AB0E-8CE1-3111-C966-26C03DE721BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{AFD75FDB-0789-D3F8-5663-F4E6C06D9784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../samplecode/ClockFaceView.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/GMSampleView.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/OverView.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/PerlinPatch.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/Sample2PtRadial.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAAClip.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAAGeometry.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAARectModes.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAARects.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAll.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAndroidShadows.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAnimatedText.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAnimBlur.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleArc.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleAtlas.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBigBlur.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBigGradient.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBitmapRect.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleBlur.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCCPRGeometry.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCamera.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleChart.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleChineseFling.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCircle.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClip.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClipDrawMatch.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleClock.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleCode.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleColorFilter.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleComplexClip.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleConcavePaths.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleDegenerateTwoPtRadials.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleDither.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleEffects.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleEmboss.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFatBits.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFillType.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilter2.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilterFuzz.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFilterQuality.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFontScalerTest.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleFuzz.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleGradients.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairCurves.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairline.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHairModes.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleHT.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleIdentityScale.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLayerMask.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLayers.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLCD.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleLines.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleManyRects.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleMeasure.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleMegaStroke.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePatch.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePath.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathText.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathClip.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathEffects.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathFinder.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathFuzz.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePathOverstroke.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePdfFileViewer.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePoints.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SamplePolyToPoly.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleQuadStroker.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRectanizer.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRegion.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleRepeatTile.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShaders.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShaderText.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowColor.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowReference.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShadowUtils.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleShip.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSlides.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStringArt.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStrokePath.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleStrokeRect.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSubpixelTranslate.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSVGFile.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleSVGPong.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleText.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextAlpha.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextBox.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextOnPath.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTextureDomain.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleTiling.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleUnpremul.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleVertices.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleWritePixels.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleXfer.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/SampleXfermodesBlur.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../samplecode/vertexdump.cpp">
+      <Filter>samplecode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3.cpp">
+      <Filter>experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3_A.cpp">
+      <Filter>experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../experimental/SkSetPoly3To3_D.cpp">
+      <Filter>experimental</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../src/core/SkThreadedBMPDevice.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../src/core/SkThreadedBMPDevice.h">
+      <Filter>src\core</Filter>
+    </None>
+  </ItemGroup>
+</Project>

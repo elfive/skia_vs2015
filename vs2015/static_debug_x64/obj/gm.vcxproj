@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|x64">
+      <Configuration>GN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82C6C024-EAC2-9A95-83E7-1B1BD10667FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gm</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x64/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../gm;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../tools/flags;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../third_party/externals/jsoncpp/include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../gm/aaa.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.aaa.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.aaa.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/aaclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.aaclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.aaclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/aarectmodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.aarectmodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.aarectmodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/aaxfermodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.aaxfermodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.aaxfermodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/addarc.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.addarc.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.addarc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/all_bitmap_configs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.all_bitmap_configs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.all_bitmap_configs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/alpha_image.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.alpha_image.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.alpha_image.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/alphagradients.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.alphagradients.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.alphagradients.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/animatedGif.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.animatedGif.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.animatedGif.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/animatedimageblurs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.animatedimageblurs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.animatedimageblurs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/anisotropic.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.anisotropic.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.anisotropic.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/annotated_text.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.annotated_text.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.annotated_text.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/arcofzorro.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.arcofzorro.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.arcofzorro.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/arcto.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.arcto.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.arcto.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/arithmode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.arithmode.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.arithmode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/badpaint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.badpaint.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.badpaint.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/beziereffects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.beziereffects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.beziereffects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/beziers.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.beziers.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.beziers.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigblurs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigblurs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigblurs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigmatrix.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigmatrix.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigmatrix.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigrect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigrect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigrect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigrrectaaeffect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigrrectaaeffect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigrrectaaeffect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigtext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigtext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigtext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bigtileimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bigtileimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bigtileimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmapcopy.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmapcopy.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmapcopy.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmapfilters.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmapfilters.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmapfilters.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmapimage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmapimage.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmapimage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmappremul.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmappremul.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmappremul.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmaprect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmaprect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmaprect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmaprecttest.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmaprecttest.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmaprecttest.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmapshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmapshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmapshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bitmaptiled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bitmaptiled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bitmaptiled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bleed.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bleed.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bleed.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blend.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blend.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blend.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurcircles.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurcircles.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurcircles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurcircles2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurcircles2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurcircles2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurignorexform.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurignorexform.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurignorexform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurimagevmask.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurimagevmask.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurimagevmask.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurquickreject.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurquickreject.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurquickreject.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurrect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurrect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurrect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurredclippedcircle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurredclippedcircle.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurredclippedcircle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurroundrect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurroundrect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurroundrect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/blurtextsmallradii.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.blurtextsmallradii.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.blurtextsmallradii.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bmpfilterqualityrepeat.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bmpfilterqualityrepeat.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bmpfilterqualityrepeat.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bug5252.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bug5252.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bug5252.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bug6643.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bug6643.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bug6643.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bug6783.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bug6783.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bug6783.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bug530095.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bug530095.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bug530095.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/bug615686.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.bug615686.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.bug615686.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/cgm.c">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.cgm.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.cgm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/cgms.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.cgms.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.cgms.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/circles.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.circles.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.circles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/circulararcs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.circulararcs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.circulararcs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/circularclips.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.circularclips.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.circularclips.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/clip_error.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.clip_error.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.clip_error.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/clip_strokerect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.clip_strokerect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.clip_strokerect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/clipdrawdraw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.clipdrawdraw.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.clipdrawdraw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/clippedbitmapshaders.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.clippedbitmapshaders.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.clippedbitmapshaders.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/color4f.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.color4f.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.color4f.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/coloremoji.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.coloremoji.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.coloremoji.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/coloremoji_blendmodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.coloremoji_blendmodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.coloremoji_blendmodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colorfilteralpha8.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colorfilteralpha8.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colorfilteralpha8.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colorfilterimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colorfilterimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colorfilterimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colorfilters.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colorfilters.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colorfilters.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colormatrix.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colormatrix.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colormatrix.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colorspacexform.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colorspacexform.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colorspacexform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/colorwheel.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.colorwheel.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.colorwheel.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/complexclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.complexclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.complexclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/complexclip_blur_tiled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.complexclip_blur_tiled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.complexclip_blur_tiled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/complexclip2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.complexclip2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.complexclip2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/complexclip3.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.complexclip3.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.complexclip3.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/complexclip4.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.complexclip4.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.complexclip4.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/composeshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.composeshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.composeshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/concavepaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.concavepaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.concavepaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/conicpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.conicpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.conicpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/constcolorprocessor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.constcolorprocessor.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.constcolorprocessor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/convex_all_line_paths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.convex_all_line_paths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.convex_all_line_paths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/convexpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.convexpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.convexpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/convexpolyclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.convexpolyclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.convexpolyclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/convexpolyeffect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.convexpolyeffect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.convexpolyeffect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/copyTo4444.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.copyTo4444.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.copyTo4444.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/crbug_691386.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.crbug_691386.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.crbug_691386.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/croppedrects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.croppedrects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.croppedrects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/crosscontextimage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.crosscontextimage.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.crosscontextimage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/cubicpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.cubicpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.cubicpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dashcircle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dashcircle.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dashcircle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dashcubics.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dashcubics.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dashcubics.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dashing.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dashing.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dashing.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/deferredtextureimage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.deferredtextureimage.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.deferredtextureimage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/degeneratesegments.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.degeneratesegments.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.degeneratesegments.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dftext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dftext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dftext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/discard.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.discard.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.discard.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/displacement.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.displacement.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.displacement.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/distantclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.distantclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.distantclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/downsamplebitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.downsamplebitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.downsamplebitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/draw_bitmap_rect_skbug4374.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.draw_bitmap_rect_skbug4374.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.draw_bitmap_rect_skbug4374.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawable.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawatlas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawatlas.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawatlas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawatlascolor.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawatlascolor.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawatlascolor.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawbitmaprect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawbitmaprect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawbitmaprect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawlooper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawlooper.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawlooper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawminibitmaprect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawminibitmaprect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawminibitmaprect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawregion.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawregion.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawregion.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drawregionmodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drawregionmodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drawregionmodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dropshadowimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dropshadowimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dropshadowimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/drrect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.drrect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.drrect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/dstreadshuffle.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.dstreadshuffle.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.dstreadshuffle.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/emboss.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.emboss.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.emboss.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/emptypath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.emptypath.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.emptypath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/encode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.encode.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.encode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/encode-alpha-jpeg.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.encode-alpha-jpeg.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.encode-alpha-jpeg.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/encode-platform.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.encode-platform.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.encode-platform.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/encode-srgb.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.encode-srgb.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.encode-srgb.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/extractbitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.extractbitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.extractbitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fadefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fadefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fadefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fatpathfill.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fatpathfill.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fatpathfill.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filltypes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filltypes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filltypes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filltypespersp.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filltypespersp.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filltypespersp.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filterbitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filterbitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filterbitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filterbug.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filterbug.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filterbug.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filterfastbounds.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filterfastbounds.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filterfastbounds.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/filterindiabox.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.filterindiabox.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.filterindiabox.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fontcache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fontcache.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fontcache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fontmgr.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fontmgr.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fontmgr.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fontscaler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fontscaler.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fontscaler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/fontscalerdistortable.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.fontscalerdistortable.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.fontscalerdistortable.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gamma.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gamma.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gamma.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gammaencodedpremul.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gammaencodedpremul.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gammaencodedpremul.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gammatext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gammatext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gammatext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gamut.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gamut.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gamut.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/getpostextpath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.getpostextpath.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.getpostextpath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/giantbitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.giantbitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.giantbitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/glyph_pos.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.glyph_pos.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.glyph_pos.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/glyph_pos_align.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.glyph_pos_align.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.glyph_pos_align.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gm.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gm.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradient_matrix.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradient_matrix.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradient_matrix.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradientDirtyLaundry.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradientDirtyLaundry.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradientDirtyLaundry.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradients.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradients.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradients.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradients_2pt_conical.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradients_2pt_conical.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradients_2pt_conical.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradients_no_texture.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradients_no_texture.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradients_no_texture.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/gradtext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.gradtext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.gradtext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/grayscalejpg.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.grayscalejpg.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.grayscalejpg.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/hairlines.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.hairlines.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.hairlines.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/hairmodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.hairmodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.hairmodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/hardstop_gradients.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.hardstop_gradients.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.hardstop_gradients.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/highcontrastfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.highcontrastfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.highcontrastfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/hittestpath.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.hittestpath.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.hittestpath.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/hsl.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.hsl.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.hsl.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/image.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.image.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.image.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/image_pict.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.image_pict.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.image_pict.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/image_shader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.image_shader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.image_shader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagealphathreshold.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagealphathreshold.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagealphathreshold.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageblur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageblur.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageblur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageblur2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageblur2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageblur2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageblurclampmode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageblurclampmode.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageblurclampmode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageblurrepeatmode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageblurrepeatmode.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageblurrepeatmode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageblurtiled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageblurtiled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageblurtiled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefilters.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefilters.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefilters.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefiltersbase.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefiltersbase.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefiltersbase.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefiltersclipped.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefiltersclipped.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefiltersclipped.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefilterscropexpand.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefilterscropexpand.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefilterscropexpand.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefilterscropped.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefilterscropped.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefilterscropped.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefiltersgraph.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefiltersgraph.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefiltersgraph.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefiltersscaled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefiltersscaled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefiltersscaled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefiltersstroked.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefiltersstroked.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefiltersstroked.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefilterstransformed.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefilterstransformed.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefilterstransformed.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagefromyuvtextures.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagefromyuvtextures.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagefromyuvtextures.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagemagnifier.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagemagnifier.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagemagnifier.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagemakewithfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagemakewithfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagemakewithfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagemasksubset.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagemasksubset.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagemasksubset.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imageresizetiled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imageresizetiled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imageresizetiled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagescalealigned.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagescalealigned.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagescalealigned.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagesource.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagesource.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagesource.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/imagesource2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.imagesource2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.imagesource2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/internal_links.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.internal_links.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.internal_links.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/inversepaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.inversepaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.inversepaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/largeglyphblur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.largeglyphblur.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.largeglyphblur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lattice.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lattice.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lattice.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lcdblendmodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lcdblendmodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lcdblendmodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lcdoverlap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lcdoverlap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lcdoverlap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lcdtext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lcdtext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lcdtext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lighting.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lighting.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lighting.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/linepaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.linepaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.linepaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/localmatriximagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.localmatriximagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.localmatriximagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/localmatriximageshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.localmatriximageshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.localmatriximageshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/lumafilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.lumafilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.lumafilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/makecolorspace.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.makecolorspace.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.makecolorspace.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/manypaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.manypaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.manypaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/matrixconvolution.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.matrixconvolution.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.matrixconvolution.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/matriximagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.matriximagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.matriximagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/megalooper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.megalooper.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.megalooper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/mipmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.mipmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.mipmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/mixedtextblobs.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.mixedtextblobs.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.mixedtextblobs.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/modecolorfilters.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.modecolorfilters.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.modecolorfilters.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/morphology.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.morphology.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.morphology.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/multipicturedraw.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.multipicturedraw.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.multipicturedraw.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/nested.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.nested.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.nested.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/ninepatchstretch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.ninepatchstretch.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.ninepatchstretch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/nonclosedpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.nonclosedpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.nonclosedpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/occludedrrectblur.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.occludedrrectblur.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.occludedrrectblur.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/offsetimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.offsetimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.offsetimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/ovals.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.ovals.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.ovals.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/overdrawcolorfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.overdrawcolorfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.overdrawcolorfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/OverStroke.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.OverStroke.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.OverStroke.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/patch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.patch.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.patch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/path_stroke_with_zero_length.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.path_stroke_with_zero_length.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.path_stroke_with_zero_length.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathcontourstart.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathcontourstart.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathcontourstart.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/patheffects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.patheffects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.patheffects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathfill.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathfill.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathfill.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathinterior.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathinterior.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathinterior.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathmaskcache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathmaskcache.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathmaskcache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathopsinverse.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathopsinverse.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathopsinverse.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathopsskpclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathopsskpclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathopsskpclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pathreverse.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pathreverse.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pathreverse.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pdf_never_embed.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pdf_never_embed.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pdf_never_embed.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/perlinnoise.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.perlinnoise.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.perlinnoise.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/perspshaders.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.perspshaders.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.perspshaders.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/picture.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.picture.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.picture.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pictureimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pictureimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pictureimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pictureimagegenerator.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pictureimagegenerator.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pictureimagegenerator.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pictureshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pictureshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pictureshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pictureshadercache.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pictureshadercache.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pictureshadercache.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pictureshadertile.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pictureshadertile.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pictureshadertile.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/pixelsnap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.pixelsnap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.pixelsnap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/plus.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.plus.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.plus.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/points.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.points.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.points.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/poly2poly.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.poly2poly.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.poly2poly.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/polygons.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.polygons.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.polygons.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/quadpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.quadpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.quadpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/radial_gradient_precision.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.radial_gradient_precision.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.radial_gradient_precision.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/readpixels.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.readpixels.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.readpixels.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/recordopts.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.recordopts.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.recordopts.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/rectangletexture.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.rectangletexture.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.rectangletexture.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/rects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.rects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.rects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/repeated_bitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.repeated_bitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.repeated_bitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/resizeimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.resizeimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.resizeimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/reveal.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.reveal.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.reveal.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/roundrects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.roundrects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.roundrects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/rrect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.rrect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.rrect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/rrectclipdrawpaint.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.rrectclipdrawpaint.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.rrectclipdrawpaint.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/rrects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.rrects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.rrects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/samplerstress.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.samplerstress.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.samplerstress.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/savelayer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.savelayer.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.savelayer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/scaledstrokes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.scaledstrokes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.scaledstrokes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shadertext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shadertext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shadertext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shadertext2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shadertext2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shadertext2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shadertext3.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shadertext3.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shadertext3.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shadows.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shadows.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shadows.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shadowutils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shadowutils.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shadowutils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shallowgradient.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shallowgradient.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shallowgradient.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shapes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shapes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shapes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/shapes_as_paths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.shapes_as_paths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.shapes_as_paths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/showmiplevels.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.showmiplevels.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.showmiplevels.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/simpleaaclip.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.simpleaaclip.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.simpleaaclip.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/simple_magnification.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.simple_magnification.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.simple_magnification.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/simplerect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.simplerect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.simplerect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/skbug_257.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.skbug_257.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.skbug_257.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/skbug_4868.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.skbug_4868.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.skbug_4868.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/skbug_5321.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.skbug_5321.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.skbug_5321.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/skbug1719.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.skbug1719.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.skbug1719.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/smallarc.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.smallarc.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.smallarc.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/smallimage.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.smallimage.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.smallimage.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/smallpaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.smallpaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.smallpaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/spritebitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.spritebitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.spritebitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/srcmode.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.srcmode.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.srcmode.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/srgb.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.srgb.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.srgb.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tosrgb_colorfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tosrgb_colorfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tosrgb_colorfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/stlouisarch.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.stlouisarch.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.stlouisarch.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/stringart.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.stringart.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.stringart.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/stroke_rect_shader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.stroke_rect_shader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.stroke_rect_shader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/strokedlines.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.strokedlines.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.strokedlines.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/strokefill.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.strokefill.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.strokefill.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/strokerect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.strokerect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.strokerect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/strokerects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.strokerects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.strokerects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/strokes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.strokes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.strokes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/stroketext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.stroketext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.stroketext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/subsetshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.subsetshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.subsetshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/surface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.surface.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.surface.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tablecolorfilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tablecolorfilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tablecolorfilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tallstretchedbitmaps.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tallstretchedbitmaps.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tallstretchedbitmaps.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/testgradient.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.testgradient.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.testgradient.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/texdata.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.texdata.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.texdata.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblob.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblob.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblob.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobblockreordering.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobblockreordering.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobblockreordering.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobcolortrans.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobcolortrans.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobcolortrans.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobgeometrychange.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobgeometrychange.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobgeometrychange.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textbloblooper.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textbloblooper.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textbloblooper.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobmixedsizes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobmixedsizes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobmixedsizes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobrandomfont.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobrandomfont.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobrandomfont.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobshader.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobshader.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobshader.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobtransforms.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobtransforms.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobtransforms.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/textblobuseaftergpufree.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.textblobuseaftergpufree.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.textblobuseaftergpufree.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/texteffects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.texteffects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.texteffects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/texturedomaineffect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.texturedomaineffect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.texturedomaineffect.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/thinconcavepaths.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.thinconcavepaths.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.thinconcavepaths.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/thinrects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.thinrects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.thinrects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/thinstrokedrects.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.thinstrokedrects.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.thinstrokedrects.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tiledscaledbitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tiledscaledbitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tiledscaledbitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tileimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tileimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tileimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tilemodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tilemodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tilemodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tilemodes_scaled.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tilemodes_scaled.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tilemodes_scaled.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/tinybitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.tinybitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.tinybitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/transparency.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.transparency.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.transparency.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/typeface.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.typeface.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.typeface.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/variedtext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.variedtext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.variedtext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/vertices.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.vertices.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.vertices.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/verttext.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.verttext.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.verttext.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/verttext2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.verttext2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.verttext2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/verylargebitmap.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.verylargebitmap.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.verylargebitmap.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/windowrectangles.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.windowrectangles.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.windowrectangles.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/xfermodeimagefilter.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.xfermodeimagefilter.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.xfermodeimagefilter.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/xfermodes.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.xfermodes.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.xfermodes.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/xfermodes2.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.xfermodes2.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.xfermodes2.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/xfermodes3.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.xfermodes3.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.xfermodes3.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/xform_image_gen.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.xform_image_gen.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.xform_image_gen.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../gm/yuvtorgbeffect.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/gm/gm.yuvtorgbeffect.obj</Command>
+      <Outputs>$(OutDir)obj/gm/gm.yuvtorgbeffect.obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/gm.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/gm.stamp" />
+  </Target>
+</Project>

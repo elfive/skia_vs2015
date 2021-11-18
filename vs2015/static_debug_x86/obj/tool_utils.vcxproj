@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{35FA9FF3-B426-10F3-2A50-C3107445FCFC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tool_utils</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>../../../vs2015/static_debug_x86/</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/Tools/MSVC/14.10.25017/include;C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include;Windows Kits/10/Include/10.0.14393.0/shared;Windows Kits/10/Include/10.0.14393.0/ucrt;Windows Kits/10/Include/10.0.14393.0/um;Windows Kits/10/Include/10.0.14393.0/winrt;C:/Program Files (x86)/Windows Kits/8.1/Include/shared;C:/Program Files (x86)/Windows Kits/10/Include/10.0.10150.0/ucrt;C:/Program Files (x86)/Windows Kits/8.1/Include/um;C:/Program Files (x86)/Windows Kits/8.1/Include/winrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/shared;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/ucrt;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/um;C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/Include/10.0.14393.0/winrt;../../../tools;../../../tools/debugger;../../../tools/timer;../../../tools/trace;../../../include/private;../../../src/c;../../../src/codec;../../../src/core;../../../src/effects;../../../src/fonts;../../../src/image;../../../src/images;../../../src/lazy;../../../src/opts;../../../src/pathops;../../../src/pdf;../../../src/ports;../../../src/sfnt;../../../src/shaders;../../../src/shaders/gradients;../../../src/sksl;../../../src/utils;../../../src/utils/win;../../../src/xml;../../../third_party/gif;../../../third_party/externals/jsoncpp/include;../../../tools/flags;../../../tools/flags;../../../third_party/libpng;../../../include/android;../../../include/c;../../../include/codec;../../../include/config;../../../include/core;../../../include/effects;../../../include/encode;../../../include/gpu;../../../include/gpu/gl;../../../include/pathops;../../../include/ports;../../../include/svg;../../../include/utils;../../../include/utils/mac;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/FS /bigobj /utf-8 /GR- /Zi %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4800;4291;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_EXCEPTIONS=0;WIN32_LEAN_AND_MEAN;NOMINMAX;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_DISCRETE_GPU;GR_TEST_UTILS=1;SK_SUPPORT_GPU=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../tools/AndroidSkDebugToStdOut.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.AndroidSkDebugToStdOut.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.AndroidSkDebugToStdOut.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/CrashHandler.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.CrashHandler.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.CrashHandler.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/LsanSuppressions.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.LsanSuppressions.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.LsanSuppressions.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/ProcStats.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.ProcStats.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.ProcStats.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/Resources.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.Resources.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.Resources.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/ThermalManager.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.ThermalManager.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.ThermalManager.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/UrlDataManager.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.UrlDataManager.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.UrlDataManager.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkDebugCanvas.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/debugger/tool_utils.SkDebugCanvas.obj</Command>
+      <Outputs>$(OutDir)obj/tools/debugger/tool_utils.SkDebugCanvas.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkDrawCommand.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/debugger/tool_utils.SkDrawCommand.obj</Command>
+      <Outputs>$(OutDir)obj/tools/debugger/tool_utils.SkDrawCommand.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkJsonWriteBuffer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/debugger/tool_utils.SkJsonWriteBuffer.obj</Command>
+      <Outputs>$(OutDir)obj/tools/debugger/tool_utils.SkJsonWriteBuffer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/debugger/SkObjectParser.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/debugger/tool_utils.SkObjectParser.obj</Command>
+      <Outputs>$(OutDir)obj/tools/debugger/tool_utils.SkObjectParser.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/picture_utils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.picture_utils.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.picture_utils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/random_parse_path.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.random_parse_path.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.random_parse_path.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/sk_tool_utils.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.sk_tool_utils.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.sk_tool_utils.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/sk_tool_utils_font.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/tool_utils.sk_tool_utils_font.obj</Command>
+      <Outputs>$(OutDir)obj/tools/tool_utils.sk_tool_utils_font.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/timer/Timer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/timer/tool_utils.Timer.obj</Command>
+      <Outputs>$(OutDir)obj/tools/timer/tool_utils.Timer.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../tools/trace/SkChromeTracingTracer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/trace/tool_utils.SkChromeTracingTracer.obj</Command>
+      <Outputs>$(OutDir)obj/tools/trace/tool_utils.SkChromeTracingTracer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkChromeTracingTracer.h" />
+    <CustomBuild Include="../../../tools/trace/SkDebugfTracer.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/trace/tool_utils.SkDebugfTracer.obj</Command>
+      <Outputs>$(OutDir)obj/tools/trace/tool_utils.SkDebugfTracer.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkDebugfTracer.h" />
+    <CustomBuild Include="../../../tools/trace/SkEventTracingPriv.cpp">
+      <Command>call ninja.exe -C $(OutDir) obj/tools/trace/tool_utils.SkEventTracingPriv.obj</Command>
+      <Outputs>$(OutDir)obj/tools/trace/tool_utils.SkEventTracingPriv.obj</Outputs>
+    </CustomBuild>
+    <None Include="../../../tools/trace/SkEventTracingPriv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja.exe -C $(OutDir) obj/tool_utils.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja.exe -C $(OutDir) -tclean obj/tool_utils.stamp" />
+  </Target>
+</Project>

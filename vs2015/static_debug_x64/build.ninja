@@ -1,0 +1,195 @@
+rule gn
+  command = C:/Users/elfive/Desktop/skia/skia/buildtools/win/gn.exe --root=C:/Users/elfive/Desktop/skia/skia -q --ide=vs --sln=skia gen .
+  description = Regenerating ninja files
+
+build build.ninja: gn
+  generator = 1
+  depfile = build.ninja.d
+
+subninja toolchain.ninja
+
+build SampleApp: phony ./SampleApp.exe
+build arm64: phony obj/arm64.stamp
+build armv7: phony obj/armv7.stamp
+build avx: phony obj/avx.stamp
+build bench: phony obj/bench.stamp
+build bookmaker: phony ./bookmaker.exe
+build colorspaceinfo: phony ./colorspaceinfo.exe
+build common_flags: phony obj/common_flags.stamp
+build compile_processors: phony obj/compile_processors.stamp
+build crc32: phony obj/crc32.stamp
+build create_flutter_test_images: phony ./create_flutter_test_images.exe
+build create_test_font: phony ./create_test_font.exe
+build dm: phony ./dm.exe
+build dump_record: phony ./dump_record.exe
+build effects: phony obj/effects.stamp
+build experimental_svg_model: phony obj/experimental_svg_model.stamp
+build flags: phony obj/flags.stamp
+build fontmgr_android: phony obj/fontmgr_android.stamp
+build fontmgr_custom: phony obj/fontmgr_custom.stamp
+build fontmgr_fontconfig: phony obj/fontmgr_fontconfig.stamp
+build fontmgr_fuchsia: phony obj/fontmgr_fuchsia.stamp
+build fuzz: phony ./fuzz.exe
+build get_images_from_skps: phony ./get_images_from_skps.exe
+build gm: phony obj/gm.stamp
+build gpu: phony obj/gpu.stamp
+build gpu_tool_utils: phony obj/gpu_tool_utils.stamp
+build heif: phony obj/heif.stamp
+build jpeg: phony obj/jpeg.stamp
+build nanobench: phony ./nanobench.exe
+build none: phony obj/none.stamp
+build ok: phony ./ok.exe
+build pathops_unittest: phony ./pathops_unittest.exe
+build pdf: phony obj/pdf.stamp
+build png: phony obj/png.stamp
+build public: phony obj/public.stamp
+build raw: phony obj/raw.stamp
+build samples: phony obj/samples.stamp
+build skdiff: phony ./skdiff.exe
+build skia: phony ./skia.lib
+build skia.h: phony obj/skia.h.stamp
+build skiaserve: phony ./skiaserve.exe
+build skp_parser: phony ./skp_parser.exe
+build skpinfo: phony ./skpinfo.exe
+build sktexttopdf: phony ./sktexttopdf.exe
+build sse2: phony obj/sse2.stamp
+build sse41: phony obj/sse41.stamp
+build sse42: phony obj/sse42.stamp
+build ssse3: phony obj/ssse3.stamp
+build tests: phony obj/tests.stamp
+build tool_utils: phony obj/tool_utils.stamp
+build typeface_freetype: phony obj/typeface_freetype.stamp
+build views: phony obj/views.stamp
+build webp: phony obj/webp.stamp
+build xml: phony obj/xml.stamp
+build jsoncpp: phony obj/third_party/jsoncpp/jsoncpp.stamp
+build libmicrohttpd: phony obj/third_party/libmicrohttpd/libmicrohttpd.stamp
+build libpng: phony obj/third_party/libpng/libpng.stamp
+build zlib: phony obj/third_party/zlib/zlib.stamp
+build zlib_x86: phony obj/third_party/zlib/zlib_x86.stamp
+build $:SampleApp: phony ./SampleApp.exe
+build $:arm64: phony obj/arm64.stamp
+build $:armv7: phony obj/armv7.stamp
+build $:avx: phony obj/avx.stamp
+build $:bench: phony obj/bench.stamp
+build $:bookmaker: phony ./bookmaker.exe
+build $:colorspaceinfo: phony ./colorspaceinfo.exe
+build $:common_flags: phony obj/common_flags.stamp
+build $:compile_processors: phony obj/compile_processors.stamp
+build $:crc32: phony obj/crc32.stamp
+build $:create_flutter_test_images: phony ./create_flutter_test_images.exe
+build $:create_test_font: phony ./create_test_font.exe
+build $:dm: phony ./dm.exe
+build $:dump_record: phony ./dump_record.exe
+build $:effects: phony obj/effects.stamp
+build $:experimental_svg_model: phony obj/experimental_svg_model.stamp
+build $:flags: phony obj/flags.stamp
+build $:fontmgr_android: phony obj/fontmgr_android.stamp
+build $:fontmgr_custom: phony obj/fontmgr_custom.stamp
+build $:fontmgr_fontconfig: phony obj/fontmgr_fontconfig.stamp
+build $:fontmgr_fuchsia: phony obj/fontmgr_fuchsia.stamp
+build $:fuzz: phony ./fuzz.exe
+build $:get_images_from_skps: phony ./get_images_from_skps.exe
+build $:gm: phony obj/gm.stamp
+build $:gpu: phony obj/gpu.stamp
+build $:gpu_tool_utils: phony obj/gpu_tool_utils.stamp
+build $:heif: phony obj/heif.stamp
+build $:jpeg: phony obj/jpeg.stamp
+build $:nanobench: phony ./nanobench.exe
+build $:none: phony obj/none.stamp
+build $:ok: phony ./ok.exe
+build $:pathops_unittest: phony ./pathops_unittest.exe
+build $:pdf: phony obj/pdf.stamp
+build $:png: phony obj/png.stamp
+build $:public: phony obj/public.stamp
+build $:raw: phony obj/raw.stamp
+build $:samples: phony obj/samples.stamp
+build $:skdiff: phony ./skdiff.exe
+build $:skia: phony ./skia.lib
+build $:skia.h: phony obj/skia.h.stamp
+build $:skiaserve: phony ./skiaserve.exe
+build $:skp_parser: phony ./skp_parser.exe
+build $:skpinfo: phony ./skpinfo.exe
+build $:sktexttopdf: phony ./sktexttopdf.exe
+build $:sse2: phony obj/sse2.stamp
+build $:sse41: phony obj/sse41.stamp
+build $:sse42: phony obj/sse42.stamp
+build $:ssse3: phony obj/ssse3.stamp
+build $:tests: phony obj/tests.stamp
+build $:tool_utils: phony obj/tool_utils.stamp
+build $:typeface_freetype: phony obj/typeface_freetype.stamp
+build $:views: phony obj/views.stamp
+build $:webp: phony obj/webp.stamp
+build $:xml: phony obj/xml.stamp
+build third_party/jsoncpp$:jsoncpp: phony obj/third_party/jsoncpp/jsoncpp.stamp
+build third_party/jsoncpp: phony obj/third_party/jsoncpp/jsoncpp.stamp
+build third_party/libmicrohttpd$:libmicrohttpd: phony obj/third_party/libmicrohttpd/libmicrohttpd.stamp
+build third_party/libmicrohttpd: phony obj/third_party/libmicrohttpd/libmicrohttpd.stamp
+build third_party/libpng$:libpng: phony obj/third_party/libpng/libpng.stamp
+build third_party/libpng: phony obj/third_party/libpng/libpng.stamp
+build third_party/zlib$:zlib: phony obj/third_party/zlib/zlib.stamp
+build third_party/zlib: phony obj/third_party/zlib/zlib.stamp
+build third_party/zlib$:zlib_x86: phony obj/third_party/zlib/zlib_x86.stamp
+
+build all: phony $
+    ./SampleApp.exe $
+    obj/arm64.stamp $
+    obj/armv7.stamp $
+    obj/avx.stamp $
+    obj/bench.stamp $
+    ./bookmaker.exe $
+    ./colorspaceinfo.exe $
+    obj/common_flags.stamp $
+    obj/compile_processors.stamp $
+    obj/crc32.stamp $
+    ./create_flutter_test_images.exe $
+    ./create_test_font.exe $
+    ./dm.exe $
+    ./dump_record.exe $
+    obj/effects.stamp $
+    obj/experimental_svg_model.stamp $
+    obj/flags.stamp $
+    obj/fontmgr_android.stamp $
+    obj/fontmgr_custom.stamp $
+    obj/fontmgr_fontconfig.stamp $
+    obj/fontmgr_fuchsia.stamp $
+    ./fuzz.exe $
+    ./get_images_from_skps.exe $
+    obj/gm.stamp $
+    obj/gpu.stamp $
+    obj/gpu_tool_utils.stamp $
+    obj/heif.stamp $
+    obj/jpeg.stamp $
+    ./nanobench.exe $
+    obj/none.stamp $
+    ./ok.exe $
+    ./pathops_unittest.exe $
+    obj/pdf.stamp $
+    obj/png.stamp $
+    obj/public.stamp $
+    obj/raw.stamp $
+    obj/samples.stamp $
+    ./skdiff.exe $
+    ./skia.lib $
+    obj/skia.h.stamp $
+    ./skiaserve.exe $
+    ./skp_parser.exe $
+    ./skpinfo.exe $
+    ./sktexttopdf.exe $
+    obj/sse2.stamp $
+    obj/sse41.stamp $
+    obj/sse42.stamp $
+    obj/ssse3.stamp $
+    obj/tests.stamp $
+    obj/tool_utils.stamp $
+    obj/typeface_freetype.stamp $
+    obj/views.stamp $
+    obj/webp.stamp $
+    obj/xml.stamp $
+    obj/third_party/jsoncpp/jsoncpp.stamp $
+    obj/third_party/libmicrohttpd/libmicrohttpd.stamp $
+    obj/third_party/libpng/libpng.stamp $
+    obj/third_party/zlib/zlib.stamp $
+    obj/third_party/zlib/zlib_x86.stamp
+
+default all
