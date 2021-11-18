@@ -12,27 +12,12 @@
 
 ### 下载编译工具和源代码
 
-1. 推荐先配置代理
+推荐先配置代理
 
 ```
 git config --global http.proxy=http://127.0.0.1:1080
 git config --global https.proxy=http://127.0.0.1:1080
 ```
-
-1. 同步编译工具和 skia 源代码
-
-```
-git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-git clone https://skia.googlesource.com/skia.git
-```
-
-如果需要指定 skia 版本（例如使用 vs2015 编译时），可以在 skia 目录下 checkout 指定版本：
-
-```
-git checkout dfcb14a34920244924eeb6ff874c10d7387246f5 -b build_for_vs2015
-```
-
- 
 
 ### 配置环境变量
 
@@ -122,7 +107,7 @@ gn gen vs2015/dynamic_debug_x64 --args='is_component_build=true is_official_buil
    cmd /c C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/bin/SetEnv.cmd /x86 && C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64_x86/
    ```
 
-   的地方替换为**（注意 && 后面需要手动添加一个空格）**：
+   的地方替换为（注意 && 后面需要手动添加一个空格）：
 
    ```
    cmd /c vcvarsall.bat x86 && 
@@ -141,7 +126,7 @@ gn gen vs2015/dynamic_debug_x64 --args='is_component_build=true is_official_buil
 
 ###  额外的
 
-如果想在编译的时候显示过多的信息，例如：include文件包含关系，则需要修改对应的 toolchain.ninja 文件，将其中的所有 `/showIncludes` 删除即可。
+如果想在编译的时候觉得显示过多的 include 包含信息，则需要修改对应的 toolchain.ninja 文件，将其中的所有 `/showIncludes` 删除即可。
 
  
 
