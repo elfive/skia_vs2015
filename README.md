@@ -1,75 +1,89 @@
-# 编译skia
+# compile skia for windows visual studio 2015
 
-## 编译环境搭建
+## setup build environment
 
-### 安装 python
+### setup proxy server
 
-只能使用 `2.7.x` 版本，注意要把 `python.exe` 所在的路径加入到系统环境变量中
-
-附下载地址：<https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi>
-
- 
-
-### 下载编译工具和源代码
-
-推荐先配置代理
+you can skip this, if your do not want use a proxy server.
 
 ```
 git config --global http.proxy=http://127.0.0.1:1080
 git config --global https.proxy=http://127.0.0.1:1080
 ```
 
-### 配置环境变量
-
-在系统环境变量 path 中加入如下路径：
+### clone this repo
 
 ```
-C:\Users\elfive\Desktop\skia\bin
-C:\Users\elfive\Desktop\skia\depot_tools
+git clone -b build_for_vs2015 https://github.com/elfive/skia_vs2015.git
 ```
 
-或者在同一个终端中使用 set 命令将额外的路径导出：
+and we assume your skia code is locate at `C:\Users\yourname\Desktop\skia_vs2015`
+
+### install python
+
+only version `2.7.x` works here, and don't forget to add python.exe to your system PATH variable.
+
+python 2.7.18 for windows 64bit download：<https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi>
+
+ 
+
+### setup environment variables
+
+then you should add those paths to your system PATH environment variable
 
 ```
-set PATH=%PATH%;C:\Users\elfive\Desktop\skia\bin;C:\Users\elfive\Desktop\skia\depot_tools
+C:\Users\yourname\Desktop\skia_vs2015\bin
+C:\Users\yourname\Desktop\skia_vs2015\depot_tools
+```
+
+or just export at the same terminal(batch file or cmd.exe) if you don't want change system configure:
+
+```
+set PATH=%PATH%;C:\Users\yourname\Desktop\skia_vs2015\bin;C:\Users\yourname\Desktop\skia_vs2015\depot_tools
 ```
 
  
 
-### 下载依赖项
+### download dependencies
 
-使用同步命令同步依赖（在 skia 目录下运行）
+using skia `git-sync-deps` sync command in your skia directory
 
 ```
 python tools/git-sync-deps
 ```
 
-#### 同步过程中常见问题及解决办法:
+it will download all the build tools and skia dependencies needed for build skia. so make sure all the content are correctly downloaded.
 
-1. 404等下载错误或者找不到 git 仓库的错误
+you can verify it by just rerun the `git-sync-deps` command, it will show all dependencies and it's version or commit id.
 
-   这个是因为 google 代码的 git 库被移除了，需要修改 skia 下 `DEPS` 文件中的库路径（注意：@后面的版本不能修改）
+#### some sync issue and it's solution:
 
-   对于找不到的库，可以去 github 搜索相关的 repo，该 repo 要能够找到对应的 commit 或者对应的 tag。 这里推荐两个 github 用户，他们有对 google 相关的依赖库进行备份，大部分可以在他们的 repo 列表中找到：
+1. 404 or can not find git repo issue:
+
+   for vs2015 build we can only use old version of skia and old dependencies, and maybe some old dependencies removed by google, so we need to modify `skia_vs2015/DEPS`, to some alternative repo(always remember version number or commit id after @ should not be changed.)
+
+   for those deleted repo can no longer download, you could find mirror repo at github.com. we recomand two users, if you need to do so, most outdated repo can be found at their repo list：
 
    ```
    https://github.com/onlyyou2023
    https://github.com/GoogleDepends
    ```
 
-   修改 `DEPS` 文件后，再次运行同步命令，直到所有依赖都正确下载且能显示出版本
+   after you modified `DEPS`, rerun `git-sync-deps` command, until all the contents are downloaded ccorrectly.
 
     
 
-2. `xxx is not a git directory` 错误
+2. `xxx is not a git directory` error
 
-   删除有问题的目录，目录的具体路径可以先查看日志确定出问题的仓库，然后根据该仓库名在`skia/DEPS`文件中找到，删除后再重新运行同步指令即可。
+   first delete the directory(if you don't know where it is, you can find it in `skia_vs2015/DEPS` file.), you should rerun `git-sync-deps` command after doing so.
 
     
 
-### 生成 vs 解决方案文件
+### generate visual studio 2015 solution file
 
-#### 生成静态库解决方案文件：
+we use `bin/gn gen` command to generate vs sln file, if you don't know how to use it, you should head to [this web page](https://gn.googlesource.com/gn/) or [this web page](https://skia.org/docs/user/build/) to find answers for yourselves.
+
+#### command to generate static libraries(.lib) build solution:
 
 ```
 gn gen vs2015/static_release_x64 --args='is_component_build=false is_official_build=true target_cpu=\"x64\" skia_enable_discrete_gpu=false skia_enable_pdf=false skia_enable_effects=false skia_use_libjpeg_turbo=false skia_use_libpng=false skia_use_libwebp=false skia_use_egl=false skia_use_angle=false skia_use_expat=false skia_use_dng_sdk=false is_debug=false skia_enable_gpu=false extra_cflags=[\"/MD\"]' --ide=vs --sln=skia
@@ -78,9 +92,13 @@ gn gen vs2015/static_debug_x86 --args='is_component_build=false is_official_buil
 gn gen vs2015/static_debug_x64 --args='is_component_build=false is_official_build=false target_cpu=\"x64\" skia_enable_pdf=false skia_enable_pdf=false skia_enable_effects=false skia_use_libjpeg_turbo=false skia_use_libpng=false skia_use_libwebp=false skia_use_egl=false skia_use_angle=false skia_use_expat=false skia_use_dng_sdk=false is_debug=true skia_enable_gpu=false extra_cflags=[\"/MDd\"]' --ide=vs --sln=skia
 ```
 
+files can be founded whthin `skia_vs2015/vs2015` directory
+
  
 
-#### 生成动态库解决方案文件：
+#### command to generate dynamic libraries(.dll) build solution：
+
+we generate  
 
 ```
 gn gen vs2015/dynamic_release_x64 --args='is_component_build=true is_official_build=true target_cpu=\"x64\" skia_enable_pdf=false skia_enable_pdf=false skia_enable_effects=false skia_use_libjpeg_turbo=false skia_use_libpng=false skia_use_libwebp=false skia_use_egl=false skia_use_angle=false skia_use_expat=false skia_use_dng_sdk=false is_debug=false skia_enable_gpu=false extra_cflags=[\"/MD\"]' --ide=vs --sln=skia
@@ -89,47 +107,51 @@ gn gen vs2015/dynamic_debug_x86 --args='is_component_build=true is_official_buil
 gn gen vs2015/dynamic_debug_x64 --args='is_component_build=true is_official_build=false target_cpu=\"x64\" skia_enable_pdf=false skia_enable_pdf=false skia_enable_effects=false skia_use_libjpeg_turbo=false skia_use_libpng=false skia_use_libwebp=false skia_use_egl=false skia_use_angle=false skia_use_expat=false skia_use_dng_sdk=false is_debug=true skia_enable_gpu=false extra_cflags=[\"/MDd\"]' --ide=vs --sln=skia
 ```
 
- 
-
-## 编译
-
-### 64位编译
-
-打开64位对应的解决方案文件，编译 skia 项目即可在解决方案目录下找到生成的二进制文件
+files can be founded whthin `skia_vs2015/vs2015` directory
 
  
 
-### 32位编译
+## compile
 
-1. 修改解决方案目录下 `toolchain.ninja` 文件，将所有类似
+### compile 64bit version
+
+just open the `skia.sln` file and then compile project `skia`, after that you can find the `skia.lib` binary at the same directory of `skia.sln`
+
+ 
+
+### compile 32bit version
+
+1. modify the `toolchain.ninja` file locate at the same directory of `skia.sln`, replace all the content(like below)
 
    ```
    cmd /c C:/Program Files (x86)/Microsoft Visual Studio 14.0/win_sdk/bin/SetEnv.cmd /x86 && C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64_x86/
    ```
 
-   的地方替换为（注意 && 后面需要手动添加一个空格）：
+   to this(notice that there is a space' ' behind &&):
 
    ```
    cmd /c vcvarsall.bat x86 && 
    ```
 
-2. 将路径添加到系统环境变量中去，例如：
+2. then add this paths to your system variables(or just export it should do the same work):
+
+   the path may different if you installed your visual studio to a different location.
 
    ```
    C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
    C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64_x86\
    ```
 
-3. 打开32位对应的解决方案文件，编译 skia 项目即可在解决方案目录下找到生成的二进制文件
+3. open the `skia.sln` file and then compile project `skia`, after that you can find the `skia.lib` binary at the same directory of `skia.sln`
 
  
 
-###  额外的
+##  one more thing
 
-如果想在编译的时候觉得显示过多的 include 包含信息，则需要修改对应的 toolchain.ninja 文件，将其中的所有 `/showIncludes` 删除即可。
+if you do not wanna show the include info whild compile skia, you just need modify the `toolchain.ninja` file, delete all the `/showIncludes` options.
 
  
 
-## 使用
+## use
 
-复制`skia/include`文件夹到对应的位置，并将其添加到附加包含目录中 引入`skia.lib`即可
+copy `skia_vs2015/include` folder to whatever you like, setup the include paths for your project, then link `skia.lib`, and you should be ok.
